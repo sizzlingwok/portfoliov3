@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f6f3;
+  font-family: "Neue Helvetica Grostek", "Inter", sans-serif;
+  color: #aaa;
+}
+
+@font-face {
+  font-family: "Neue Helvetica Grostek";
+  src: url("/fonts/NeueHaasGroteskDisplay-Reg.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Helvetica Grostek";
+  src: url("/fonts/NeueHaasGroteskDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Helvetica Grostek";
+  src: url("/fonts/NeueHaasGroteskDisplay-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
