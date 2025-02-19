@@ -1,5 +1,7 @@
 export default function Page() {
   return (
-    <main className="flex items-center justify-center min-h-screen">HELLO</main>
+    <main className="text-8xl flex items-center justify-center h-[calc(100vh-160px)]">
+      hello
+    </main>
   );
 }

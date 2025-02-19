@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: "#333333", // This will override Tailwind's default black
+        black: "#333333",
+        lightgray: "#aaa",
       },
     },
   },
