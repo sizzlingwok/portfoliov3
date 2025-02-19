@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="w-full py-8 px-6">
+    <footer className="w-full py-8 px-10">
       <div className="mx-auto flex justify-center">
-        <p className="text-sm text-lightgray select-none">
+        <p className="text-xs text-lightgray select-none">
           © 2025 | Andy Duong
         </p>
       </div>

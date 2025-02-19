@@ -4,29 +4,38 @@
 
 body {
   background-color: #f9f6f3;
-  font-family: "Neue Helvetica Grostek", "Inter", sans-serif;
+  font-family: "SF Pro Display", -apple-system, "Segoe UI", Helvetica,
+    sans-serif;
 }
 
 @font-face {
-  font-family: "Neue Helvetica Grostek";
-  src: url("/fonts/NeueHaasGroteskDisplay-Reg.woff2") format("woff2");
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Neue Helvetica Grostek";
-  src: url("/fonts/NeueHaasGroteskDisplay-Medium.woff2") format("woff2");
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Neue Helvetica Grostek";
-  src: url("/fonts/NeueHaasGroteskDisplay-SemiBold.woff2") format("woff2");
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
