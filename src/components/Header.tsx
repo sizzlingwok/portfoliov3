@@ -5,8 +5,11 @@ export default function Header() {
   return (
     <header className="w-full py-8 px-8">
       <nav className="mx-auto flex items-center justify-between">
-        <div className="text-lg text-black font-semibold select-none">
-          <Link href="/" className="hover:opacity-80">
+        <div className="text-lg text-lightgray select-none">
+          <Link
+            href="/"
+            className="hover:text-black transition-colors duration-300"
+          >
             Andy Duong
           </Link>
         </div>

@@ -11,6 +11,9 @@ module.exports = {
         lightgray: "#aaa",
         sand: "#F4F3F1",
       },
+      fontSize: {
+        medium: "22px",
+      },
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@
 
 body {
   background-color: white;
-  font-family: "SF Pro Display", -apple-system, "Segoe UI", Helvetica,
+  font-family: var(--font-sf-pro), -apple-system, "Segoe UI", Helvetica,
     sans-serif;
 }
 

@@ -49,9 +49,9 @@ export default function Page() {
   return (
     <main className="flex-col min-h-screen">
       <section className="landing px-8 py-24 flex flex-col gap-4 select-none">
-        <h1 className="text-8xl">Hello</h1>
+        <h1 className="text-8xl font-medium">Hello</h1>
         <h2 className="text-4xl">I'm Andy Duong</h2>
-        <h2 className="text-2xl font-light text-lightgray">
+        <h2 className="text-medium font-light text-lightgray">
           UX Designer based in the Bay Area, creating meaningful narratives
           driven by my passion for music and art. Scroll down to explore
         </h2>
