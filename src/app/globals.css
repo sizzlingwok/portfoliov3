@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 body {
-  background-color: #f9f6f3;
+  background-color: white;
   font-family: "SF Pro Display", -apple-system, "Segoe UI", Helvetica,
     sans-serif;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
