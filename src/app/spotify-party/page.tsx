@@ -3,27 +3,29 @@ import Image from "next/image";
 export default function SpotifyParty() {
   return (
     <main className="flex-col min-h-screen">
-      <section className="landing px-8 pt-[32rem] flex flex-col gap-40 select-none">
+      <section className="landing px-24 pt-64 flex flex-col gap-40 select-none">
         <h1 className="text-8xl font-medium">Spotify Party</h1>
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between gap-4 3xl:text-xl">
           <p className="font-medium shrink-0">001</p>
-          <div className="flex flex-col gap-2 shrink-0">
-            <p className="font-medium">Role</p>
-            <p className="font-light text-lightgray">
-              UX Design, User Research, Visual Design, Prototyping
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 shrink-0">
-            <p className="font-medium">Tools</p>
-            <p className="font-light text-lightgray">
-              Figma, Google Forms, Optimal Workshop, After Effects
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 shrink-0">
-            <p className="font-medium">Timeline</p>
-            <p className="font-light text-lightgray">
-              8 weeks (June - July 2023)
-            </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2 shrink-0">
+              <p className="font-medium">Role</p>
+              <p className="font-light text-lightgray">
+                UX Design, User Research, Visual Design, Prototyping
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 shrink-0">
+              <p className="font-medium">Tools</p>
+              <p className="font-light text-lightgray">
+                Figma, Google Forms, Optimal Workshop, After Effects
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 shrink-0">
+              <p className="font-medium">Timeline</p>
+              <p className="font-light text-lightgray">
+                8 weeks (June - July 2023)
+              </p>
+            </div>
           </div>
           <h2 className="font-light text-lightgray basis-1/3">
             Spotify Party strives to enhance the listening experience for users
@@ -49,6 +51,18 @@ export default function SpotifyParty() {
               </span>
             </a>
           </div>
+        </div>
+      </section>
+      <section className="overflow-hidden py-20 relative bg-white">
+        <div className="flex animate-marquee">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className="mx-2 w-[80vw] md:w-[60vw] lg:w-[35vw] aspect-[3/2] bg-sand rounded-lg flex items-center justify-center shrink-0"
+            >
+              <span className="text-2xl text-lightgray">Image {i}</span>
+            </div>
+          ))}
         </div>
       </section>
     </main>

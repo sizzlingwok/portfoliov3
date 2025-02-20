@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Link href={href}>
-      <div className="bg-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)]">
+      <div className="bg-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-300 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)]">
         <div className="flex-1 flex items-center justify-center">
           <Image
             src={imagePath}

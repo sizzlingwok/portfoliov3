@@ -1,9 +1,8 @@
-"use client";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full py-8 px-8">
+    <header className="w-full py-8 px-8 lg:px-24 transition-[padding] duration-300 ease-in-out">
       <nav className="mx-auto flex items-center justify-between">
         <div className="text-lg text-lightgray select-none">
           <Link

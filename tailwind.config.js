@@ -14,6 +14,18 @@ module.exports = {
       fontSize: {
         medium: "22px",
       },
+      screens: {
+        "3xl": "2100px",
+      },
+      animation: {
+        slide: "slide 45s linear infinite",
+      },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],

@@ -48,7 +48,7 @@ const projects = [
 export default function Page() {
   return (
     <main className="flex-col min-h-screen">
-      <section className="landing px-8 py-24 flex flex-col gap-4 select-none">
+      <section className="landing px-8 lg:px-24 py-24 flex flex-col gap-4 select-none transition-[padding] duration-300 ease-in-out">
         <h1 className="text-8xl font-medium">Hello</h1>
         <h2 className="text-4xl">I'm Andy Duong</h2>
         <h2 className="text-medium font-light text-lightgray">
