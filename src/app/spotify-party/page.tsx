@@ -101,15 +101,20 @@ export default function SpotifyParty() {
           ))}
         </Marquee>
       </section>
-      <SectionHeading
-        id="002"
-        title="Final Solution"
-        description="Evolving the group listening experience by introducing improved
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="002"
+          title="Final Solution"
+          description="Evolving the group listening experience by introducing improved
             functionality and features for all Spotify users"
-      ></SectionHeading>
+        />
+      </section>
+
       <section className="video-section px-8 py-8 md:py-20 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-xl md:flex-row">
         <div className="content-container flex flex-col gap-8 items-center justify-center w-full mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
             <div className="video-wrapper flex w-full md:w-1/2">
               <video
                 autoPlay
@@ -133,7 +138,7 @@ export default function SpotifyParty() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
             <div className="video-wrapper flex w-full md:w-1/2">
               <video
                 autoPlay
@@ -157,7 +162,7 @@ export default function SpotifyParty() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+          <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
             <div className="video-wrapper flex w-full md:w-1/2">
               <video
                 autoPlay
@@ -183,12 +188,21 @@ export default function SpotifyParty() {
           </div>
         </div>
       </section>
-
-      <SectionHeading
-        id="003"
-        title="User Research"
-        description="Evaluating the user flow for initiating the Spotify group session"
-      ></SectionHeading>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="003"
+          title="User Research"
+          description="Evaluating the user flow for initiating the Spotify group session"
+        />
+        <SectionHeading
+          id="003"
+          title="First click test"
+          description="In the initial phase, I assessed users' ability to navigate to the group sesion menu through a first click test with 7 participants on the Spotify mobile app. While I planned to extend the test to the desktop platform, the feature was exclusive to mobile. Despite this limitation, the early findings provided crucial insights for subsequent analyses."
+          hideId={true}
+        />
+      </section>
     </main>
   );
 }
