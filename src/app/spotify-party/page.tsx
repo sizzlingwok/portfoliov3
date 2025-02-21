@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import Marquee from "react-fast-marquee";
+import SectionHeading from "../../components/SectionHeading";
 export const metadata: Metadata = {
   title: "Spotify Party",
   description:
@@ -100,16 +101,12 @@ export default function SpotifyParty() {
           ))}
         </Marquee>
       </section>
-      <section className="body px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
-        <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
-          <p className="font-medium shrink-0 text-xl max-md:pb-4">002</p>
-          <p className="font-medium shrink-0 text-xl">Final Solution</p>
-          <h2 className="font-light text-lightgray basis-1/3">
-            Evolving the group listening experience by introducing improved
-            functionality and features for all Spotify users
-          </h2>
-        </div>
-      </section>
+      <SectionHeading
+        id="002"
+        title="Final Solution"
+        description="Evolving the group listening experience by introducing improved
+            functionality and features for all Spotify users"
+      ></SectionHeading>
       <section className="video-section px-8 py-8 md:py-20 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-xl md:flex-row">
         <div className="content-container flex flex-col gap-8 items-center justify-center w-full mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
@@ -187,25 +184,11 @@ export default function SpotifyParty() {
         </div>
       </section>
 
-      <section className="body px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
-        <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
-          <p className="font-medium shrink-0 text-xl max-md:pb-4">003</p>
-          <p className="font-medium shrink-0 text-xl">User Research</p>
-          <h2 className="font-light text-lightgray basis-1/3">
-            Evaluating the user flow for initiating the Spotify group session
-          </h2>
-        </div>
-      </section>
-      <section className="landing px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
-        <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
-          <p className="font-medium shrink-0 text-xl max-md:pb-4">002</p>
-          <p className="font-medium shrink-0 text-xl">Final Solution</p>
-          <h2 className="font-light text-lightgray basis-1/3">
-            Evolving the group listening experience by introducing improved
-            functionality and features for all Spotify users
-          </h2>
-        </div>
-      </section>
+      <SectionHeading
+        id="003"
+        title="User Research"
+        description="Evaluating the user flow for initiating the Spotify group session"
+      ></SectionHeading>
     </main>
   );
 }
