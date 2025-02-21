@@ -43,10 +43,10 @@ export default function SpotifyParty() {
         </a>
       </div>
       <section className="landing px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
-        <h1 className="text-8xl font-medium">Spotify Party</h1>
+        <h1 className="project-name text-8xl font-medium">Spotify Party</h1>
         <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
-          <p className="font-medium shrink-0 text-xl">001</p>
-          <div className="flex flex-col gap-4">
+          <p className="num font-medium shrink-0 text-xl">001</p>
+          <div className="project-info flex flex-col gap-4">
             <div className="flex flex-col gap-2 shrink-0">
               <p className="font-medium">Role</p>
               <p className="font-light text-lightgray">
@@ -66,7 +66,7 @@ export default function SpotifyParty() {
               </p>
             </div>
           </div>
-          <h2 className="font-light text-lightgray basis-1/3">
+          <h2 className="project-description font-light text-lightgray basis-1/3">
             Spotify Party strives to enhance the listening experience for users
             who enjoy music with others. While creating group sessions already
             exist on Spotify, it currently falls short in terms of functionality
@@ -77,7 +77,7 @@ export default function SpotifyParty() {
           </h2>
         </div>
       </section>
-      <section className="overflow-hidden py-20 relative">
+      <section className="marquee overflow-hidden py-20 relative">
         <Marquee speed={80} direction="left">
           {marquee.map((image, index) => (
             <div
@@ -99,6 +99,102 @@ export default function SpotifyParty() {
             </div>
           ))}
         </Marquee>
+      </section>
+      <section className="body px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
+        <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
+          <p className="font-medium shrink-0 text-xl max-md:pb-4">002</p>
+          <p className="font-medium shrink-0 text-xl">Final Solution</p>
+          <h2 className="font-light text-lightgray basis-1/3">
+            Evolving the group listening experience by introducing improved
+            functionality and features for all Spotify users
+          </h2>
+        </div>
+      </section>
+      <section className="video-section px-8 py-8 md:py-20 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-xl md:flex-row">
+        <div className="content-container flex flex-col gap-8 items-center justify-center w-full mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+            <div className="video-wrapper flex w-full md:w-1/2">
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="w-full rounded-md shadow-md"
+              >
+                <source
+                  src="/videos/spotify/spotifyinvitefriends.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div className="video-description flex flex-col w-full md:w-1/2 md:text-left gap-2">
+              <p className="font-medium">Inviting friends</p>
+              <p className="font-light text-lightgray">
+                Easily invite friends directly within the app eliminating the
+                need for external invitations through links or social media
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+            <div className="video-wrapper flex w-full md:w-1/2">
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="w-full rounded-md shadow-md"
+              >
+                <source
+                  src="/videos/spotify/spotifygroupsettings.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div className="video-description flex flex-col w-full md:w-1/2 md:text-left gap-2">
+              <p className="font-medium">Group settings</p>
+              <p className="font-light text-lightgray">
+                Streamline your sessions with customizable group settings.
+                Delegate moderation privileges and fine-tune options for a more
+                enjoyable experience
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-32 w-full max-w-screen-2xl 3xl:max-w-screen-3xl">
+            <div className="video-wrapper flex w-full md:w-1/2">
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="w-full rounded-md shadow-md"
+              >
+                <source
+                  src="/videos/spotify/spotifysessionplaylist.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div className="video-description flex flex-col w-full md:w-1/2 md:text-left gap-2">
+              <p className="font-medium">Curated playlists</p>
+              <p className="font-light text-lightgray">
+                Rediscover past group sessions with curated playlists of
+                previously played tracks. Replay any missed songs or
+                effortlessly share playlists with others
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="body px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
+        <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
+          <p className="font-medium shrink-0 text-xl max-md:pb-4">003</p>
+          <p className="font-medium shrink-0 text-xl">User Research</p>
+          <h2 className="font-light text-lightgray basis-1/3">
+            Evaluating the user flow for initiating the Spotify group session
+          </h2>
+        </div>
       </section>
       <section className="landing px-8 pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
         <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">

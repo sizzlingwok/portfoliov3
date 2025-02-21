@@ -2,6 +2,13 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
+    title: "Readeezy AI Reading Companion",
+    description:
+      "Enhancing the group listening experience for an immersive music exploration",
+    imagePath: "/images/home/spotify.png",
+    href: "/readeezy",
+  },
+  {
     title: "Spotify Party",
     description:
       "Enhancing the group listening experience for an immersive music exploration",
@@ -21,20 +28,6 @@ const projects = [
       "Mobile marketplace app dedicated to buying and selling keyboard related products",
     imagePath: "/images/home/mechmarket.png",
     href: "/mechmarket",
-  },
-  {
-    title: "Dillo",
-    description:
-      "Integrating ASL into family bedtime reading to support deaf and hard of hearing children",
-    imagePath: "/images/home/dillo.png",
-    href: "/dillo",
-  },
-  {
-    title: "Dillo",
-    description:
-      "Integrating ASL into family bedtime reading to support deaf and hard of hearing children",
-    imagePath: "/images/home/dillo.png",
-    href: "/dillo",
   },
   {
     title: "Dillo",
