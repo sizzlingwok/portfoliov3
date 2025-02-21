@@ -37,7 +37,10 @@ const SFPro = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Andy Duong",
+  title: {
+    template: "%s | Andy Duong",
+    default: "Andy Duong",
+  },
   description:
     "Hello I'm Andy Duong — UX Designer based in the Bay Area, creating meaningful narratives driven by my passion for music and art.",
 };

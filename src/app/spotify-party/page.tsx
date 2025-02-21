@@ -1,4 +1,28 @@
 import Image from "next/image";
+import { Metadata } from "next";
+import Marquee from "react-fast-marquee";
+export const metadata: Metadata = {
+  title: "Spotify Party",
+  description:
+    "Spotify Party strives to enhance the listening experience for users who enjoy music with others.",
+};
+
+const marquee = [
+  {
+    src: "/images/spotify/queue.png",
+    alt: "Spotify Party Group Session Queue",
+  },
+  { src: "/images/spotify/partyinvite.png", alt: "Spotify Party Invite" },
+  {
+    src: "/images/spotify/joingroupsession.png",
+    alt: "Spotify Party Join Group Session",
+  },
+  {
+    src: "/images/spotify/curatedplaylist.png",
+    alt: "Curated Group Session Playlist",
+  },
+  { src: "/images/spotify/settings.png", alt: "Group Session Settings" },
+];
 
 export default function SpotifyParty() {
   return (
@@ -6,7 +30,7 @@ export default function SpotifyParty() {
       <section className="landing px-24 pt-64 flex flex-col gap-40 select-none">
         <h1 className="text-8xl font-medium">Spotify Party</h1>
         <div className="flex justify-between gap-4 3xl:text-xl">
-          <p className="font-medium shrink-0">001</p>
+          <p className="font-medium shrink-0 text-xl">001</p>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2 shrink-0">
               <p className="font-medium">Role</p>
@@ -54,16 +78,27 @@ export default function SpotifyParty() {
         </div>
       </section>
       <section className="overflow-hidden py-20 relative bg-white">
-        <div className="flex animate-marquee">
-          {[1, 2, 3, 4, 5].map((i) => (
+        <Marquee speed={80} gradient={false} direction="left">
+          {marquee.map((image, index) => (
             <div
-              key={i}
-              className="mx-2 w-[80vw] md:w-[60vw] lg:w-[35vw] aspect-[3/2] bg-sand rounded-lg flex items-center justify-center shrink-0"
+              key={index}
+              className="w-[80vw] md:w-[60vw] lg:w-[35vw] rounded-md overflow-hidden shrink-0 relative flex items-center justify-center mr-6"
             >
-              <span className="text-2xl text-lightgray">Image {i}</span>
+              <div className="relative h-[90%] w-auto">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={800}
+                  height={600}
+                  priority={true}
+                  draggable={false}
+                  className="object-contain rounded-md h-full w-auto"
+                  sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, 35vw"
+                />
+              </div>
             </div>
           ))}
-        </div>
+        </Marquee>
       </section>
     </main>
   );
