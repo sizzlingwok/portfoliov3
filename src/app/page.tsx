@@ -1,43 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
 
-const projects = [
-  {
-    title: "Readeezy AI Reading Companion",
-    description:
-      "Enhancing the group listening experience for an immersive music exploration",
-    imagePath: "/images/home/spotify.png",
-    href: "/readeezy",
-  },
-  {
-    title: "Spotify Party",
-    description:
-      "Enhancing the group listening experience for an immersive music exploration",
-    imagePath: "/images/home/spotify.png",
-    href: "/spotify-party",
-  },
-  {
-    title: "sorette",
-    description:
-      "Cloud sharing platform streamlining music collaboration with others",
-    imagePath: "/images/home/sorette.png",
-    href: "/sorette",
-  },
-  {
-    title: "mechmarket",
-    description:
-      "Mobile marketplace app dedicated to buying and selling keyboard related products",
-    imagePath: "/images/home/mechmarket.png",
-    href: "/mechmarket",
-  },
-  {
-    title: "Dillo",
-    description:
-      "Integrating ASL into family bedtime reading to support deaf and hard of hearing children",
-    imagePath: "/images/home/dillo.png",
-    href: "/dillo",
-  },
-];
-
 export default function Page() {
   return (
     <main className="flex-col min-h-screen">
@@ -49,16 +11,47 @@ export default function Page() {
           driven by my passion for music and art. Scroll down to explore
         </h2>
       </section>
-      <section className="project-grid grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 px-8 py-10">
-        {projects.map((project) => (
+      <section className="project-grid flex flex-wrap px-8 py-10">
+        <div className="w-full xl:w-1/3 lg:w-1/2 p-4 transition-all duration-300 ease-in-out">
           <ProjectCard
-            key={project.href}
-            title={project.title}
-            description={project.description}
-            imagePath={project.imagePath}
-            href={project.href}
+            title="Readeezy AI Reading Companion"
+            description="Enhancing the group listening experience for an immersive music exploration"
+            imagePath="/images/home/spotify.png"
+            href="/readeezy"
           />
-        ))}
+        </div>
+        <div className="w-full xl:w-1/3 lg:w-1/2 p-4 transition-all duration-300 ease-in-out">
+          <ProjectCard
+            title="Spotify Party"
+            description="Enhancing the group listening experience for an immersive music exploration"
+            imagePath="/images/home/spotify.png"
+            href="/spotify-party"
+          />
+        </div>
+        <div className="w-full xl:w-1/3 lg:w-1/2 p-4 transition-all duration-300 ease-in-out">
+          <ProjectCard
+            title="sorette"
+            description="Cloud sharing platform streamlining music collaboration with others"
+            imagePath="/images/home/sorette.png"
+            href="/sorette"
+          />
+        </div>
+        <div className="w-full xl:w-1/3 lg:w-1/2 p-4 transition-all duration-300 ease-in-out">
+          <ProjectCard
+            title="mechmarket"
+            description="Mobile marketplace app dedicated to buying and selling keyboard related products"
+            imagePath="/images/home/mechmarket.png"
+            href="/mechmarket"
+          />
+        </div>
+        <div className="w-full xl:w-1/3 lg:w-1/2 p-4 transition-all duration-300 ease-in-out">
+          <ProjectCard
+            title="Dillo"
+            description="Integrating ASL into family bedtime reading to support deaf and hard of hearing children"
+            imagePath="/images/home/dillo.png"
+            href="/dillo"
+          />
+        </div>
       </section>
     </main>
   );

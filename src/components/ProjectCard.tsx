@@ -15,8 +15,8 @@ export default function ProjectCard({
   href,
 }: ProjectCardProps) {
   return (
-    <Link href={href}>
-      <div className="bg-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-300 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)]">
+    <Link href={href} className="block w-full">
+      <div className="bg-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-150 ease-in-out transform lg:hover:ring-2 lg:hover:ring-black/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)]">
         <div className="flex-1 flex items-center justify-center">
           <Image
             src={imagePath}
@@ -24,7 +24,7 @@ export default function ProjectCard({
             width={1000}
             height={1000}
             priority
-            className="w-3/4 object-contain rounded-md transition-all duration-500 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
+            className="w-3/4 object-contain rounded-md transition-all duration-150 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
           />
         </div>
         <div className="pb-6 px-6">
