@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Link href={href} className="block w-full">
-      <div className="bg-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-150 ease-in-out transform lg:hover:ring-2 lg:hover:ring-black/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)]">
+      <div className="bg-sand dark:bg-dark-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-150 ease-in-out transform lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]">
         <div className="flex-1 flex items-center justify-center">
           <Image
             src={imagePath}
@@ -24,13 +24,13 @@ export default function ProjectCard({
             width={1000}
             height={1000}
             priority
-            className="w-3/4 object-contain rounded-md transition-all duration-150 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
+            className="w-3/4 object-contain rounded-md transition-all duration-300 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
           />
         </div>
         <div className="pb-6 px-6">
           <div className="flex flex-col gap-1">
-            <p className="font-medium">{title}</p>
-            <p className="text-lightgray">{description}</p>
+            <p className="font-medium dark:text-dark-text">{title}</p>
+            <p className="text-lightgray dark:text-dark-gray">{description}</p>
           </div>
         </div>
       </div>

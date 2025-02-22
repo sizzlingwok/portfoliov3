@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import localFont from "next/font/local";
+import { ThemeProvider } from "next-themes";
 
 const SFPro = localFont({
   src: [
@@ -47,13 +48,15 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={SFPro.variable}>
-      <body>
-        <div className="layout min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+    <html lang="en" className={SFPro.variable} suppressHydrationWarning>
+      <body className="transition-colors duration-300 dark:bg-dark-bg dark:text-dark-text">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="layout min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
