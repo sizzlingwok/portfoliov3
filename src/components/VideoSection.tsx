@@ -25,7 +25,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({
         </video>
       </div>
       <div className="video-description flex flex-col w-full md:w-1/2 md:text-left gap-2">
-        <p className="font-medium">{title}</p>
+        <p className="font-medium text-lg">{title}</p>
         <p className="font-light text-lightgray">{description}</p>
       </div>
     </div>

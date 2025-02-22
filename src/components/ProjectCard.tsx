@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Link href={href} className="block w-full">
-      <div className="bg-sand dark:bg-dark-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-150 ease-in-out transform lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]">
+      <div className="bg-sand dark:bg-dark-sand aspect-square w-full rounded-lg flex flex-col group transition-all duration-300 ease-in-out transform lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]">
         <div className="flex-1 flex items-center justify-center">
           <Image
             src={imagePath}

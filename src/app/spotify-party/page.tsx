@@ -4,6 +4,8 @@ import SectionHeading from "../../components/SectionHeading";
 import VideoSection from "../../components/VideoSection";
 import MarqueeImage from "../../components/MarqueeImage";
 import ProjectHeader from "../../components/ProjectHeader";
+import CardInfo from "../../components/CardInfo";
+
 export const metadata: Metadata = {
   title: "Spotify Party",
   description:
@@ -91,7 +93,7 @@ export default function SpotifyParty() {
         </div>
       </section>
       <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
       >
         <SectionHeading
           id="003"
@@ -102,6 +104,79 @@ export default function SpotifyParty() {
           title="First click test"
           description="In the initial phase, I assessed users' ability to navigate to the group sesion menu through a first click test with 7 participants on the Spotify mobile app. While I planned to extend the test to the desktop platform, the feature was exclusive to mobile. Despite this limitation, the early findings provided crucial insights for subsequent analyses."
         />
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="004"
+          title="Problem Statement"
+          description="How can we revitalize group listening and enhance accessbility?"
+        />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+            <CardInfo
+              title="Group session feature is hard to find"
+              description="The option to start a group session is buried in the device list, making it easy to overlook."
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#1DB954"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              }
+            />
+            <CardInfo
+              title="Feature unavailable on desktop"
+              description="Spotify's group session feature is missing on desktop, limiting cross-platform usability."
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#1DB954"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                  />
+                </svg>
+              }
+            />
+            <CardInfo
+              title="No direct friend activity integration"
+              description="Inviting friends requires sharing links externally, lacking an in-app invite option."
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#1DB954"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+                  />
+                </svg>
+              }
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
