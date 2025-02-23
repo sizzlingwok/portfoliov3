@@ -24,7 +24,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       <p className="font-medium text-xl dark:text-dark-text md:col-start-2">
         {title}
       </p>
-      <h2 className="font-light text-lightgray dark:text-dark-gray md:col-start-3">
+      <h2 className="font-light text-lightgray md:col-start-3">
         {description}
       </h2>
       {children && <div className="col-span-full mt-4">{children}</div>}

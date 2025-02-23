@@ -1,3 +1,4 @@
+/* @type {import('tailwindcss').Config} */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,14 +8,8 @@
 }
 
 body {
-  background-color: white;
   font-family: var(--font-sf-pro), -apple-system, "Segoe UI", Helvetica,
     sans-serif;
-}
-
-.dark body {
-  background-color: #121212;
-  color: #e4e4e4;
 }
 
 /* Apply transition to specific properties for smoother theme switching */
@@ -24,44 +19,4 @@ button {
   transition-property: color, background-color, border-color;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Pro Display";
-  src: url("/fonts/SF-Pro-Display-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
 }
