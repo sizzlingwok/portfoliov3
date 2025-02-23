@@ -5,12 +5,14 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   useEffect(() => {
     setMounted(true);
+    setTheme("system");
   }, []);
 
   const toggleMenu = () => {
@@ -65,11 +67,13 @@ export default function Header() {
           {mounted && (
             <li>
               <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() =>
+                  setTheme(currentTheme === "dark" ? "light" : "dark")
+                }
                 className="bg-sand dark:bg-dark-sand px-4 py-2 rounded-lg flex items-center gap-2 group transition-all duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10"
                 aria-label="Toggle theme"
               >
-                {theme === "light" ? (
+                {currentTheme === "light" ? (
                   <span className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -113,11 +117,13 @@ export default function Header() {
         <div className="md:hidden flex items-center gap-2">
           {mounted && (
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(currentTheme === "dark" ? "light" : "dark")
+              }
               className="bg-sand dark:bg-dark-sand p-2 rounded-lg flex items-center"
               aria-label="Toggle theme"
             >
-              {theme === "light" ? (
+              {currentTheme === "light" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-4 h-4"

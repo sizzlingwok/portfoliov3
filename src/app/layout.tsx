@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={SFPro.variable} suppressHydrationWarning>
+    <html lang="en" className={SFPro.variable}>
       <body className="transition-colors duration-300 dark:bg-dark-bg dark:text-dark-text">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="layout min-h-screen flex flex-col">
