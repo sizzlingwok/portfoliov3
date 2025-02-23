@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+import ThemeScript from "@/components/ThemeScript";
 
 const SFPro = localFont({
   src: [
@@ -49,7 +50,10 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={SFPro.variable}>
-      <body className="transition-colors duration-300 dark:bg-dark-bg dark:text-dark-text">
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="layout min-h-screen flex flex-col">
             <Header />

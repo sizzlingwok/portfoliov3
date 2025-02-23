@@ -12,11 +12,4 @@ body {
     sans-serif;
 }
 
-/* Apply transition to specific properties for smoother theme switching */
-body,
-a,
-button {
-  transition-property: color, background-color, border-color;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
-}
+/* Remove all general transitions, let components handle their own transitions */

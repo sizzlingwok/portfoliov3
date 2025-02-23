@@ -40,7 +40,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
             <p className="font-light text-lightgray ">{timeline}</p>
           </div>
         </div>
-        <h2 className="project-description font-light text-lightgray dark:text-dark-gray basis-1/3">
+        <h2 className="project-description font-light text-lightgray  basis-1/3">
           {description}
         </h2>
       </div>

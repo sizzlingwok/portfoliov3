@@ -12,7 +12,7 @@ export default function Page() {
         </h2>
       </section>
       <section className="project-grid flex flex-wrap gap-6 px-8 py-10">
-        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-all duration-300 ease-in-out">
+        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-[width] duration-300 ease-in-out">
           <ProjectCard
             title="Readeezy AI Reading Companion"
             description="Enhancing the group listening experience for an immersive music exploration"
@@ -20,7 +20,7 @@ export default function Page() {
             href="/readeezy"
           />
         </div>
-        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-all duration-300 ease-in-out">
+        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-[width] duration-300 ease-in-out">
           <ProjectCard
             title="Spotify Party"
             description="Enhancing the group listening experience for an immersive music exploration"
@@ -28,7 +28,7 @@ export default function Page() {
             href="/spotify-party"
           />
         </div>
-        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-all duration-300 ease-in-out">
+        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-[width] duration-300 ease-in-out">
           <ProjectCard
             title="sorette"
             description="Cloud sharing platform streamlining music collaboration with others"
@@ -36,7 +36,7 @@ export default function Page() {
             href="/sorette"
           />
         </div>
-        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-all duration-300 ease-in-out">
+        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-[width] duration-300 ease-in-out">
           <ProjectCard
             title="mechmarket"
             description="Mobile marketplace app dedicated to buying and selling keyboard related products"
@@ -44,7 +44,7 @@ export default function Page() {
             href="/mechmarket"
           />
         </div>
-        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-all duration-300 ease-in-out">
+        <div className="w-full xl:w-[calc(33.333%-1rem)] lg:w-[calc(50%-0.75rem)] transition-[width] duration-300 ease-in-out">
           <ProjectCard
             title="Dillo"
             description="Integrating ASL into family bedtime reading to support deaf and hard of hearing children"
