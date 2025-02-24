@@ -6,6 +6,7 @@ import MarqueeImage from "../../components/MarqueeImage";
 import ProjectHeader from "../../components/ProjectHeader";
 import CardInfo from "../../components/CardInfo";
 import Image from "next/image";
+import ImageCarousel from "../../components/ImageCarousel";
 
 export const metadata: Metadata = {
   title: "Spotify Party",
@@ -115,7 +116,7 @@ export default function SpotifyParty() {
           description="How can we revitalize group listening and enhance accessbility?"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
             <CardInfo
               title="Group session feature is hard to find"
               description="The option to start a group session is buried in the device list, making it easy to overlook."
@@ -188,7 +189,7 @@ export default function SpotifyParty() {
           description="Introducing Michelle & Edward"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
             <CardInfo
               title="Michelle"
               description="Michelle, a party enthusiast, creates perfect playlists for
@@ -227,32 +228,66 @@ export default function SpotifyParty() {
               insights in the process."
         />
         <div className="flex justify-center w-full">
-          <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto">
-            <Image
-              src="/images/spotify/applemusic.webp"
-              alt="Apple Music"
-              width={256}
-              height={256}
-              className="object-contain select-none"
-            />
-            <Image
-              src="/images/spotify/amazonmusic.webp"
-              alt="Amazon Music"
-              width={256}
-              height={256}
-              className="object-contain select-none"
-            />
-            <Image
-              src="/images/spotify/youtubemusic.webp"
-              alt="YouTube Music"
-              width={256}
-              height={256}
-              className="object-contain select-none"
-            />
+          <div className="flex md:flex-row flex-col items-center justify-center gap-16 w-full max-w-7xl mx-auto px-8 lg:px-24">
+            <div className="relative max-w-[256px] w-full aspect-[2/1]">
+              <Image
+                src="/images/spotify/applemusic-light.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/applemusic-dark.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+
+            <div className="relative max-w-[256px] w-full aspect-[2/1]">
+              <Image
+                src="/images/spotify/amazonmusic-light.png"
+                alt="Amazon Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/amazonmusic-dark.png"
+                alt="Amazon Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+            <div className="relative max-w-[256px] w-full aspect-[2/1]">
+              <Image
+                src="/images/spotify/youtubemusic-light.png"
+                alt="YouTube Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/youtubemusic-dark.png"
+                alt="YouTube Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
             <CardInfo
               title="Similar User Experience"
               description="Each platform provides a seamless intuitive interface with a consistent design and well-structured layout"
@@ -277,10 +312,43 @@ export default function SpotifyParty() {
         <SectionHeading
           id="007"
           title="Information Architecture"
-          description="Introducing Michelle & Edward"
+          description="A structured approach to organizing and presenting information"
+        />
+        <ImageCarousel
+          images={[
+            {
+              src: "/images/spotify/queue.png",
+              alt: "Spotify Party Group Session Queue",
+            },
+            {
+              src: "/images/spotify/partyinvite.png",
+              alt: "Spotify Party Invite",
+            },
+            {
+              src: "/images/spotify/joingroupsession.png",
+              alt: "Spotify Party Join Group Session",
+            },
+            {
+              src: "/images/spotify/curatedplaylist.png",
+              alt: "Curated Group Session Playlist",
+            },
+            {
+              src: "/images/spotify/settings.png",
+              alt: "Group Session Settings",
+            },
+          ]}
+        />
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="008"
+          title="Usability Testing"
+          description="Evaluating the Spotify Party prototype"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
             <CardInfo
               title="Michelle"
               description="Michelle, a party enthusiast, creates perfect playlists for
@@ -301,6 +369,36 @@ export default function SpotifyParty() {
                   better invitation system in place so he can continue to invite
                   the same friends to his sessions."
               image="/images/spotify/edward.webp"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="009"
+          title="Wrapping up"
+          description="This section concludes the project with final thoughts on the process and outcomes"
+        />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
+            <CardInfo
+              title="Project Takeaways"
+              description="Inspired by the limitations of Spotify's group session
+                  feature, I created Spotify Party to explore innovative designs
+                  and enhance my app organization skills. The project refined my
+                  smart animate techniques and visual continuity, marking my
+                  first responsive design for both desktop and mobile platforms."
+            />
+            <CardInfo
+              title="Things I would do differently"
+              description="In hindsight, I devoted considerable time to manual tasks like
+                  copying album cover arts and track information, which
+                  prolonged the design phase. Reflecting on this, I realize I
+                  could have streamlined the process by reusing assets and
+                  focusing more on functional aspects to expedite project
+                  completion."
             />
           </div>
         </div>

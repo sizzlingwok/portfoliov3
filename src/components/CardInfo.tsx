@@ -25,6 +25,7 @@ const CardInfo: React.FC<CardInfoProps> = ({
               width={40}
               height={40}
               className="object-cover w-full h-full"
+              draggable={false}
             />
           </div>
         ) : icon ? (
