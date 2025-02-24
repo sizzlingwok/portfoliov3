@@ -5,6 +5,7 @@ import VideoSection from "../../components/VideoSection";
 import MarqueeImage from "../../components/MarqueeImage";
 import ProjectHeader from "../../components/ProjectHeader";
 import CardInfo from "../../components/CardInfo";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Spotify Party",
@@ -114,7 +115,7 @@ export default function SpotifyParty() {
           description="How can we revitalize group listening and enhance accessbility?"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
             <CardInfo
               title="Group session feature is hard to find"
               description="The option to start a group session is buried in the device list, making it easy to overlook."
@@ -174,6 +175,132 @@ export default function SpotifyParty() {
                   />
                 </svg>
               }
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="005"
+          title="User Persona"
+          description="Introducing Michelle & Edward"
+        />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center">
+            <CardInfo
+              title="Michelle"
+              description="Michelle, a party enthusiast, creates perfect playlists for
+                  her events. Prior to each gathering, she dedicates herself to
+                  selecting tracks, ensuring an unforgettable experience. In her
+                  quest for new music, she dreams of a feature allowing guests
+                  to queue up favorite tracks with a voting system for an
+                  enhanced party experience."
+              image="/images/spotify/michelle.webp"
+            />
+            <CardInfo
+              title="Edward"
+              description="Edward is an avid music listener who loves to play songs with
+                  his friends. He recently found out about the group session
+                  feature Spotify implemented. He likes the idea of such
+                  feature, but finds it tedious to constantly invite his friends
+                  through links to listen along with him. He wishes there was a
+                  better invitation system in place so he can continue to invite
+                  the same friends to his sessions."
+              image="/images/spotify/edward.webp"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="006"
+          title="Competitive Analysis"
+          description="I conducted a comprehensive analysis of Spotify's direct
+              competitors, assessing their user interface and implementation of
+              listening group sessions with others. This endeavor allowed me to
+              delve deeper into their approach to user experience as well as
+              explore other related functionalities, uncovering valuable
+              insights in the process."
+        />
+        <div className="flex justify-center w-full">
+          <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto">
+            <Image
+              src="/images/spotify/applemusic.webp"
+              alt="Apple Music"
+              width={256}
+              height={256}
+              className="object-contain select-none"
+            />
+            <Image
+              src="/images/spotify/amazonmusic.webp"
+              alt="Amazon Music"
+              width={256}
+              height={256}
+              className="object-contain select-none"
+            />
+            <Image
+              src="/images/spotify/youtubemusic.webp"
+              alt="YouTube Music"
+              width={256}
+              height={256}
+              className="object-contain select-none"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+            <CardInfo
+              title="Similar User Experience"
+              description="Each platform provides a seamless intuitive interface with a consistent design and well-structured layout"
+              image="/images/spotify/michelle.webp"
+            />
+            <CardInfo
+              title="Cross-platform compatibility"
+              description="Users can seamlessly play media across devices, including phones, tablets, computers, and TVs"
+              image="/images/spotify/edward.webp"
+            />
+            <CardInfo
+              title="Playlist sharing"
+              description="Users can easily share playlists with others through a simple shareable link"
+              image="/images/spotify/edward.webp"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+      >
+        <SectionHeading
+          id="007"
+          title="Information Architecture"
+          description="Introducing Michelle & Edward"
+        />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[120rem] justify-center">
+            <CardInfo
+              title="Michelle"
+              description="Michelle, a party enthusiast, creates perfect playlists for
+                  her events. Prior to each gathering, she dedicates herself to
+                  selecting tracks, ensuring an unforgettable experience. In her
+                  quest for new music, she dreams of a feature allowing guests
+                  to queue up favorite tracks with a voting system for an
+                  enhanced party experience."
+              image="/images/spotify/michelle.webp"
+            />
+            <CardInfo
+              title="Edward"
+              description="Edward is an avid music listener who loves to play songs with
+                  his friends. He recently found out about the group session
+                  feature Spotify implemented. He likes the idea of such
+                  feature, but finds it tedious to constantly invite his friends
+                  through links to listen along with him. He wishes there was a
+                  better invitation system in place so he can continue to invite
+                  the same friends to his sessions."
+              image="/images/spotify/edward.webp"
             />
           </div>
         </div>
