@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <ThemeScript />
       </head>
-      <body className="transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text">
+      <body className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="layout min-h-screen flex flex-col">
             <Header />

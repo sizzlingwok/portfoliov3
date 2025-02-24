@@ -22,7 +22,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
       <h1 className="project-name text-8xl font-medium dark:text-dark-text">
         {projectName}
       </h1>
-      <div className="flex flex-col justify-between gap-4 3xl:text-xl md:flex-row">
+      <div className="flex flex-col justify-between gap-4 3xl:text-lg md:flex-row">
         <p className="num font-medium shrink-0 text-xl dark:text-dark-text">
           {projectId}
         </p>

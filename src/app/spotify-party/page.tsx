@@ -73,7 +73,7 @@ export default function SpotifyParty() {
         />
       </section>
 
-      <section className="video-section px-8 py-8 md:py-40 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-xl md:flex-row">
+      <section className="video-section px-8 py-8 md:py-20 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-lg md:flex-row">
         <div className="content-container flex flex-col gap-8 items-center justify-center w-full mx-auto">
           <VideoSection
             videoId="spotifyinvitefriends"
