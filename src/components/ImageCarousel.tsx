@@ -46,12 +46,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={800}
-                  height={600}
+                  width={1200}
+                  height={900}
                   priority
                   draggable={false}
                   className="object-contain rounded-md w-full h-auto"
-                  sizes="(md) 33vw, 100vw"
+                  sizes="(md) 45vw, 100vw"
                 />
               </div>
             </li>

@@ -15,7 +15,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] gap-4 md:gap-x-8 3xl:text-lg items-start w-full">
+    <div className="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] gap-4 md:gap-x-8 3xl:text-lg items-baseline w-full">
       {id ? (
         <p className="font-medium text-xl dark:text-dark-text">{id}</p>
       ) : (

@@ -106,6 +106,117 @@ export default function SpotifyParty() {
           title="First click test"
           description="In the initial phase, I assessed users' ability to navigate to the group sesion menu through a first click test with 7 participants on the Spotify mobile app. While I planned to extend the test to the desktop platform, the feature was exclusive to mobile. Despite this limitation, the early findings provided crucial insights for subsequent analyses."
         />
+        <div className="flex flex-col justify-center items-center w-full gap-4">
+          <div className="relative w-full max-w-5xl h-[100px]">
+            <Image
+              src="/images/spotify/firstclicktest-light.png"
+              alt="First click test"
+              fill
+              sizes="1024px"
+              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity]"
+              draggable={false}
+            />
+            <Image
+              src="/images/spotify/firstclicktest-dark.png"
+              alt="First click test"
+              fill
+              sizes="1024px"
+              className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+              draggable={false}
+            />
+          </div>
+
+          <div className="flex items-baseline gap-2">
+            <p className="font-medium text-xl dark:text-dark-text">28%</p>
+            <p className="font-light text-lightgray">
+              of users clicked on the appropriate menu as their first choice
+            </p>
+          </div>
+        </div>
+        <SectionHeading
+          title="Major Usability Issues"
+          description="Only 28% of users successfully found the menu, highlighting its unintuitive placement. As a result, the group session feature is often overlooked, further impacted by its limited functionality."
+        />
+        <div className="flex flex-col justify-center items-center w-full gap-4">
+          <div className="relative max-w-[256px] w-full aspect-[1/1]">
+            <Image
+              src="/images/spotify/surveyresults1-light.png"
+              alt="Apple Music"
+              fill
+              sizes="256px"
+              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+              draggable={false}
+            />
+            <Image
+              src="/images/spotify/surveyresults1-dark.png"
+              alt="Apple Music"
+              fill
+              sizes="256px"
+              className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+              draggable={false}
+            />
+          </div>
+
+          <div className="flex items-baseline gap-2">
+            <p className="font-light text-lightgray">
+              participants considered themselves an expert Spotify user
+            </p>
+          </div>
+          <div className="flex flex-row gap-4">
+            <div className="relative max-w-[256px] w-full aspect-[1/1]">
+              <Image
+                src="/images/spotify/surveyresults1-light.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/surveyresults1-dark.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+
+            <div className="flex items-baseline gap-2">
+              <p className="font-light text-lightgray">
+                participants considered themselves an expert Spotify user
+              </p>
+            </div>
+            <div className="relative max-w-[256px] w-full aspect-[1/1]">
+              <Image
+                src="/images/spotify/surveyresults1-light.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/surveyresults1-dark.png"
+                alt="Apple Music"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+          </div>
+
+          <div className="flex items-baseline gap-2">
+            <p className="font-light text-lightgray">
+              participants considered themselves an expert Spotify user
+            </p>
+          </div>
+        </div>
+        <SectionHeading
+          title="Major Usability Issues"
+          description="Only 28% of users successfully found the menu, highlighting its unintuitive placement. As a result, the group session feature is often overlooked, further impacted by its limited functionality."
+        />
       </section>
       <section
         className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}

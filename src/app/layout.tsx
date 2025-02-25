@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import ThemeScript from "@/components/ThemeScript";
+import ScrollHeader from "@/components/ScrollHeader";
 
 const SFPro = localFont({
   src: [
@@ -57,6 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="layout min-h-screen flex flex-col">
             <Header />
+            <ScrollHeader />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

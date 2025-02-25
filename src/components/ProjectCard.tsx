@@ -24,7 +24,7 @@ export default function ProjectCard({
             width={1000}
             height={1000}
             priority
-            className="w-3/4 object-contain rounded-md transition-transform duration-300 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
+            className="w-3/4 object-contain rounded-md transition-[transform,filter] duration-300 ease-in-out lg:group-hover:-translate-y-4 relative z-10 lg:group-hover:drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)]"
           />
         </div>
         <div className="pb-6 px-6">

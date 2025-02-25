@@ -45,7 +45,11 @@ function SunIcon() {
   );
 }
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+  enableHover?: boolean;
+}
+
+export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -63,7 +67,15 @@ export default function ThemeToggle() {
       className="bg-sand dark:bg-dark-sand px-4 py-2 rounded-lg flex items-center gap-2 group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10"
       aria-label="Toggle theme"
     >
-      {currentTheme === "light" ? <MoonIcon /> : <SunIcon />}
+      <span
+        className={
+          enableHover
+            ? "transition-transform duration-300 ease-in-out hover:scale-125"
+            : ""
+        }
+      >
+        {currentTheme === "light" ? <MoonIcon /> : <SunIcon />}
+      </span>
     </button>
   );
 }
