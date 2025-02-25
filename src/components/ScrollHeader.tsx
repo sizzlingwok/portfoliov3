@@ -73,7 +73,7 @@ export default function ScrollHeader() {
           <ul className="flex items-center gap-6">
             {navigationItems}
             <li>
-              <div className="[&>button]:hover:ring-0 [&>button]:hover:shadow-none">
+              <div className="[&>button]:hover:ring-0 [&>button]:hover:shadow-none [&>button]:px-2">
                 <ThemeToggle enableHover={true} />
               </div>
             </li>
