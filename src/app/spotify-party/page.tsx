@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function SpotifyParty() {
   return (
-    <main className="flex-col min-h-screen">
+    <main className="flex-col min-h-screen overflow-x-hidden">
       <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
         <a
           href="https://www.figma.com/proto/5ciCRD3R2H8jz0fRfKJPJD/Spotify-Party-Landing-Page?page-id=0%3A1&type=design&node-id=1-2&viewport=1334%2C874%2C0.71&t=MT5QwGlDdOlSKv5J-1&scaling=scale-down"
@@ -95,7 +95,7 @@ export default function SpotifyParty() {
         </div>
       </section>
       <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out max-w-full`}
       >
         <SectionHeading
           id="003"
@@ -113,7 +113,7 @@ export default function SpotifyParty() {
               alt="First click test"
               fill
               sizes="1024px"
-              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity]"
+              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
               draggable={false}
             />
             <Image
@@ -127,9 +127,12 @@ export default function SpotifyParty() {
           </div>
 
           <div className="flex items-baseline gap-2">
-            <p className="font-medium text-xl dark:text-dark-text">28%</p>
-            <p className="font-light text-lightgray">
-              of users clicked on the appropriate menu as their first choice
+            <p className="font-medium text-xl dark:text-dark-text 3xl:text-xl">
+              28%
+            </p>
+            <p className="font-light text-lightgray 3xl:text-lg">
+              of participants clicked on the appropriate menu as their first
+              choice
             </p>
           </div>
         </div>
@@ -138,35 +141,11 @@ export default function SpotifyParty() {
           description="Only 28% of users successfully found the menu, highlighting its unintuitive placement. As a result, the group session feature is often overlooked, further impacted by its limited functionality."
         />
         <div className="flex flex-col justify-center items-center w-full gap-4">
-          <div className="relative max-w-[256px] w-full aspect-[1/1]">
-            <Image
-              src="/images/spotify/surveyresults1-light.png"
-              alt="Apple Music"
-              fill
-              sizes="256px"
-              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
-              draggable={false}
-            />
-            <Image
-              src="/images/spotify/surveyresults1-dark.png"
-              alt="Apple Music"
-              fill
-              sizes="256px"
-              className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-              draggable={false}
-            />
-          </div>
-
-          <div className="flex items-baseline gap-2">
-            <p className="font-light text-lightgray">
-              participants considered themselves an expert Spotify user
-            </p>
-          </div>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col items-center gap-4">
             <div className="relative max-w-[256px] w-full aspect-[1/1]">
               <Image
                 src="/images/spotify/surveyresults1-light.png"
-                alt="Apple Music"
+                alt="28% of participants considered themselves an expert Spotify user"
                 fill
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
@@ -174,49 +153,121 @@ export default function SpotifyParty() {
               />
               <Image
                 src="/images/spotify/surveyresults1-dark.png"
-                alt="Apple Music"
+                alt="Survey result 1"
                 fill
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
               />
             </div>
-
-            <div className="flex items-baseline gap-2">
-              <p className="font-light text-lightgray">
-                participants considered themselves an expert Spotify user
-              </p>
-            </div>
-            <div className="relative max-w-[256px] w-full aspect-[1/1]">
-              <Image
-                src="/images/spotify/surveyresults1-light.png"
-                alt="Apple Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
-                draggable={false}
-              />
-              <Image
-                src="/images/spotify/surveyresults1-dark.png"
-                alt="Apple Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-                draggable={false}
-              />
-            </div>
+            <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+              considered themselves an expert Spotify user
+            </p>
           </div>
 
-          <div className="flex items-baseline gap-2">
-            <p className="font-light text-lightgray">
-              participants considered themselves an expert Spotify user
-            </p>
+          <SectionHeading title="But.." description="" />
+
+          <div className="flex flex-col justify-center items-center w-full gap-8">
+            <div className="flex flex-row justify-center gap-16 w-full flex-wrap">
+              <div className="flex flex-col items-center gap-4">
+                <div className="relative max-w-[256px] w-full aspect-[1/1]">
+                  <Image
+                    src="/images/spotify/surveyresults1-light.png"
+                    alt="Survey result 1"
+                    fill
+                    sizes="256px"
+                    className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                    draggable={false}
+                  />
+                  <Image
+                    src="/images/spotify/surveyresults1-dark.png"
+                    alt="Survey result 1"
+                    fill
+                    sizes="256px"
+                    className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                    draggable={false}
+                  />
+                </div>
+                <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+                  of participants could not initiate a group session
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <div className="relative max-w-[256px] w-full aspect-[1/1]">
+                  <Image
+                    src="/images/spotify/surveyresults2-light.png"
+                    alt="Survey result 2"
+                    fill
+                    sizes="256px"
+                    className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                    draggable={false}
+                  />
+                  <Image
+                    src="/images/spotify/surveyresults2-dark.png"
+                    alt="Survey result 2"
+                    fill
+                    sizes="256px"
+                    className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                    draggable={false}
+                  />
+                </div>
+                <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+                  of participants didn’t know about Spotify’s group session
+                  feature
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <SectionHeading
           title="Major Usability Issues"
           description="Only 28% of users successfully found the menu, highlighting its unintuitive placement. As a result, the group session feature is often overlooked, further impacted by its limited functionality."
         />
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+            <CardInfo
+              title="Users Struggle to Invite Friends"
+              description="Users have difficulty in inviting friends. The user onboarding msut be enhanced to provide a more intuitive experience for those wishing to invite and join friends"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#1DB954"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              }
+            />
+            <CardInfo
+              title="Playback Conflicts"
+              description="The potential conflicts stemming from track skipping by any participant must be addressed as users are facing disruptive behavior by malicious users"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#1DB954"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                  />
+                </svg>
+              }
+            />
+          </div>
+        </div>
       </section>
       <section
         className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
@@ -339,62 +390,28 @@ export default function SpotifyParty() {
               insights in the process."
         />
         <div className="flex justify-center w-full">
-          <div className="flex md:flex-row flex-col items-center justify-center gap-16 w-full max-w-7xl mx-auto px-8 lg:px-24">
-            <div className="relative max-w-[256px] w-full aspect-[2/1]">
-              <Image
-                src="/images/spotify/applemusic-light.png"
-                alt="Apple Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
-                draggable={false}
-              />
-              <Image
-                src="/images/spotify/applemusic-dark.png"
-                alt="Apple Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-                draggable={false}
-              />
-            </div>
-
-            <div className="relative max-w-[256px] w-full aspect-[2/1]">
-              <Image
-                src="/images/spotify/amazonmusic-light.png"
-                alt="Amazon Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
-                draggable={false}
-              />
-              <Image
-                src="/images/spotify/amazonmusic-dark.png"
-                alt="Amazon Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-                draggable={false}
-              />
-            </div>
-            <div className="relative max-w-[256px] w-full aspect-[2/1]">
-              <Image
-                src="/images/spotify/youtubemusic-light.png"
-                alt="YouTube Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
-                draggable={false}
-              />
-              <Image
-                src="/images/spotify/youtubemusic-dark.png"
-                alt="YouTube Music"
-                fill
-                sizes="256px"
-                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-                draggable={false}
-              />
-            </div>
+          <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto transition-all duration-300 ease-in-out">
+            <Image
+              src="/images/spotify/applemusic.webp"
+              alt="Apple Music"
+              width={256}
+              height={256}
+              className="object-contain select-none transition-transform duration-300 ease-in-out"
+            />
+            <Image
+              src="/images/spotify/amazonmusic.webp"
+              alt="Amazon Music"
+              width={256}
+              height={256}
+              className="object-contain select-none transition-transform duration-300 ease-in-out"
+            />
+            <Image
+              src="/images/spotify/youtubemusic.webp"
+              alt="YouTube Music"
+              width={256}
+              height={256}
+              className="object-contain select-none transition-transform duration-300 ease-in-out"
+            />
           </div>
         </div>
         <div className="flex justify-center">

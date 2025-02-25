@@ -40,7 +40,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           {images.map((image, index) => (
             <li
               key={index}
-              className="relative w-screen md:w-[33.333vw] shrink-0 snap-center md:first:ml-[33.333vw] md:last:mr-[33.333vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
+              className="relative w-screen md:w-[65vw] shrink-0 snap-center md:first:ml-[33.333vw] md:last:mr-[33.333vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
             >
               <div className="relative">
                 <Image
