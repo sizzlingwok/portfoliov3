@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 
 const navigationItems = (
   <>
@@ -36,12 +37,18 @@ export default function Header() {
   return (
     <header className="w-full py-8 px-8 lg:px-24 transition-[padding] duration-300 ease-in-out relative">
       <nav className="mx-auto flex items-center justify-between">
-        <div className="text-lg text-lightgray dark:text-dark-lightgray select-none">
+        <div className="select-none">
           <Link
             href="/"
             className="hover:opacity-80 transition-opacity duration-300"
           >
-            Andy Duong
+            <Image
+              src="/favicon.ico"
+              alt="Andy Duong"
+              width={40}
+              height={40}
+              className="object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)] dark:drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]"
+            />
           </Link>
         </div>
 

@@ -3,9 +3,24 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 const navigationItems = (
   <>
+    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
+      <Link
+        href="/"
+        className="hover:opacity-80 transition-opacity duration-300"
+      >
+        <Image
+          src="/favicon.ico"
+          alt="Andy Duong"
+          width={24}
+          height={24}
+          className="object-contain"
+        />
+      </Link>
+    </li>
     <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
       <Link href="/about" className="hover:opacity-80">
         About

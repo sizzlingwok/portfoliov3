@@ -10,6 +10,7 @@
 body {
   font-family: var(--font-sf-pro), -apple-system, "Segoe UI", Helvetica,
     sans-serif;
+  font-weight: 400;
 }
 
 .scrollbar-hide {

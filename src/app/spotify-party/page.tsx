@@ -24,7 +24,7 @@ export default function SpotifyParty() {
           rel="noopener noreferrer"
           className="bg-sand dark:bg-dark-sand px-6 py-3 rounded-lg flex items-center gap-2 whitespace-nowrap group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]"
         >
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 text-[15px]">
             View Prototype
             <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
               ↗
@@ -107,20 +107,20 @@ export default function SpotifyParty() {
           description="In the initial phase, I assessed users' ability to navigate to the group sesion menu through a first click test with 7 participants on the Spotify mobile app. While I planned to extend the test to the desktop platform, the feature was exclusive to mobile. Despite this limitation, the early findings provided crucial insights for subsequent analyses."
         />
         <div className="flex flex-col justify-center items-center w-full gap-4">
-          <div className="relative max-w-[256px] w-full aspect-[1/1]">
+          <div className="relative w-fit">
             <Image
               src="/images/spotify/firstclicktest-light.png"
               alt="First click test"
-              fill
-              sizes="1024px"
-              className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+              width={1024}
+              height={128}
+              className="object-contain select-none dark:opacity-0 transition-opacity"
               draggable={false}
             />
             <Image
               src="/images/spotify/firstclicktest-dark.png"
               alt="First click test"
-              fill
-              sizes="1024px"
+              width={1024}
+              height={128}
               className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
               draggable={false}
             />
