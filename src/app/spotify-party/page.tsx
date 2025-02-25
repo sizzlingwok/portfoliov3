@@ -398,6 +398,7 @@ export default function SpotifyParty() {
               height={256}
               className="object-contain select-none transition-transform duration-300 ease-in-out"
             />
+
             <Image
               src="/images/spotify/amazonmusic.webp"
               alt="Amazon Music"
