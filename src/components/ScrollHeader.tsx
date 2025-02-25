@@ -6,25 +6,25 @@ import ThemeToggle from "./ThemeToggle";
 
 const navigationItems = (
   <>
-    <li className="text-[15px] text-lightgray">
+    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
       <Link href="/about" className="hover:opacity-80">
         About
       </Link>
     </li>
-    <li className="text-[15px] text-lightgray">
+    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
       <a
         href="https://linkedin.com/in/andyduong-"
-        className="hover:opacity-80"
+        className="hover:opacity-80 transition-opacity duration-300"
         target="_blank"
         rel="noopener noreferrer"
       >
         LinkedIn
       </a>
     </li>
-    <li className="text-[15px] text-lightgray">
+    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
       <a
         href="/Andy_Duong_Resume.pdf"
-        className="hover:opacity-80"
+        className="hover:opacity-80 transition-opacity duration-300"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -49,7 +49,7 @@ export default function ScrollHeader() {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out select-none ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >

@@ -10,9 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        lightgray: "#767676",
+        lightgray: "#6e6e6e",
         sand: "#F4F3F1",
         dark: {
+          lightgray: "#828282",
           bg: "#121212",
           sand: "#1A1917",
         },

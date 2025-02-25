@@ -24,7 +24,7 @@ export default function SpotifyParty() {
           rel="noopener noreferrer"
           className="bg-sand dark:bg-dark-sand px-6 py-3 rounded-lg flex items-center gap-2 whitespace-nowrap group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]"
         >
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-2">
             View Prototype
             <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
               ↗
@@ -107,7 +107,7 @@ export default function SpotifyParty() {
           description="In the initial phase, I assessed users' ability to navigate to the group sesion menu through a first click test with 7 participants on the Spotify mobile app. While I planned to extend the test to the desktop platform, the feature was exclusive to mobile. Despite this limitation, the early findings provided crucial insights for subsequent analyses."
         />
         <div className="flex flex-col justify-center items-center w-full gap-4">
-          <div className="relative w-full max-w-5xl h-[100px]">
+          <div className="relative max-w-[256px] w-full aspect-[1/1]">
             <Image
               src="/images/spotify/firstclicktest-light.png"
               alt="First click test"
@@ -130,7 +130,7 @@ export default function SpotifyParty() {
             <p className="font-medium text-xl dark:text-dark-text 3xl:text-xl">
               28%
             </p>
-            <p className="font-light text-lightgray 3xl:text-lg">
+            <p className="text-lightgray dark:text-dark-lightgray 3xl:text-lg">
               of participants clicked on the appropriate menu as their first
               choice
             </p>
@@ -160,7 +160,7 @@ export default function SpotifyParty() {
                 draggable={false}
               />
             </div>
-            <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+            <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
               considered themselves an expert Spotify user
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function SpotifyParty() {
                     draggable={false}
                   />
                 </div>
-                <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+                <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
                   of participants could not initiate a group session
                 </p>
               </div>
@@ -212,7 +212,7 @@ export default function SpotifyParty() {
                     draggable={false}
                   />
                 </div>
-                <p className="font-light text-lightgray 3xl:text-lg text-center max-w-[256px]">
+                <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
                   of participants didn’t know about Spotify’s group session
                   feature
                 </p>
@@ -502,34 +502,28 @@ export default function SpotifyParty() {
         </div>
       </section>
       <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
+        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out pb-32`}
       >
+        <SectionHeading id="009" title="Wrapping up" description="" />
         <SectionHeading
-          id="009"
-          title="Wrapping up"
-          description="This section concludes the project with final thoughts on the process and outcomes"
-        />
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
-            <CardInfo
-              title="Project Takeaways"
-              description="Inspired by the limitations of Spotify's group session
+          id=""
+          title="Project Takeaways"
+          description="Inspired by the limitations of Spotify's group session
                   feature, I created Spotify Party to explore innovative designs
                   and enhance my app organization skills. The project refined my
                   smart animate techniques and visual continuity, marking my
                   first responsive design for both desktop and mobile platforms."
-            />
-            <CardInfo
-              title="Things I would do differently"
-              description="In hindsight, I devoted considerable time to manual tasks like
+        />
+        <SectionHeading
+          id=""
+          title="Things I would do differently"
+          description="In hindsight, I devoted considerable time to manual tasks like
                   copying album cover arts and track information, which
                   prolonged the design phase. Reflecting on this, I realize I
                   could have streamlined the process by reusing assets and
                   focusing more on functional aspects to expedite project
                   completion."
-            />
-          </div>
-        </div>
+        />
       </section>
     </main>
   );

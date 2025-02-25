@@ -29,18 +29,20 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
         <div className="project-info flex flex-col gap-4">
           <div className="flex flex-col gap-2 shrink-0">
             <p className="font-medium dark:text-dark-text">Role</p>
-            <p className="font-light text-lightgray ">{role}</p>
+            <p className="text-lightgray dark:text-dark-lightgray">{role}</p>
           </div>
           <div className="flex flex-col gap-2 shrink-0">
             <p className="font-medium dark:text-dark-text">Tools</p>
-            <p className="font-light text-lightgray ">{tools}</p>
+            <p className="text-lightgray dark:text-dark-lightgray">{tools}</p>
           </div>
           <div className="flex flex-col gap-2 shrink-0">
             <p className="font-medium dark:text-dark-text">Timeline</p>
-            <p className="font-light text-lightgray ">{timeline}</p>
+            <p className="text-lightgray dark:text-dark-lightgray">
+              {timeline}
+            </p>
           </div>
         </div>
-        <h2 className="project-description font-light text-lightgray  basis-1/3">
+        <h2 className="project-description text-lightgray dark:text-dark-lightgray basis-1/3">
           {description}
         </h2>
       </div>

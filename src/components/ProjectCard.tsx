@@ -30,7 +30,9 @@ export default function ProjectCard({
         <div className="pb-6 px-6">
           <div className="flex flex-col gap-1">
             <p className="font-medium">{title}</p>
-            <p className="text-lightgray">{description}</p>
+            <p className="text-lightgray dark:text-dark-lightgray">
+              {description}
+            </p>
           </div>
         </div>
       </div>

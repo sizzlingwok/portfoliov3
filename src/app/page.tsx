@@ -7,7 +7,7 @@ export default function Page() {
         <h1 className="text-8xl font-medium">Hello</h1>
         <div className="flex flex-col gap-2">
           <h2 className="text-2xl">I'm Andy Duong</h2>
-          <h2 className="text-medium font-light text-lightgray text-xl">
+          <h2 className="text-medium font-light text-lightgray dark:text-dark-lightgray text-xl">
             UX Designer based in the Bay Area, creating meaningful narratives
             driven by my passion for music and art. Scroll down to explore
           </h2>
