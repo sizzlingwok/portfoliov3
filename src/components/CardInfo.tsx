@@ -33,7 +33,7 @@ const CardInfo: React.FC<CardInfoProps> = ({
         ) : null}
         <p className="font-medium text-lg dark:text-dark-text">{title}</p>
       </div>
-      <p className="font-light text-lightgray dark:text-dark-lightgray flex-grow">
+      <p className="text-lightgray dark:text-dark-lightgray flex-grow">
         {description}
       </p>
     </div>
