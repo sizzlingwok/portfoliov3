@@ -21,11 +21,11 @@ export default function SpotifyParty() {
       <ProjectNavbar
         prototypeUrl="https://www.figma.com/proto/5ciCRD3R2H8jz0fRfKJPJD/Spotify-Party-Landing-Page?page-id=0%3A1&type=design&node-id=1-2&viewport=1334%2C874%2C0.71&t=MT5QwGlDdOlSKv5J-1&scaling=scale-down"
         previousProject={{
-          name: "Readeezy",
+          name: "Readeezy AI Reading Companion",
           href: "/readeezy",
         }}
         nextProject={{
-          name: "Sorette",
+          name: "sorette",
           href: "/sorette",
         }}
       />
@@ -61,9 +61,7 @@ export default function SpotifyParty() {
           />
         </Marquee>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="002"
           title="Final Solution"
@@ -91,9 +89,7 @@ export default function SpotifyParty() {
           />
         </div>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out max-w-full`}
-      >
+      <section className="project-section max-w-full">
         <SectionHeading
           id="003"
           title="User Research"
@@ -266,9 +262,7 @@ export default function SpotifyParty() {
           </div>
         </div>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="004"
           title="Problem Statement"
@@ -339,9 +333,7 @@ export default function SpotifyParty() {
           </div>
         </div>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="005"
           title="User Persona"
@@ -373,9 +365,7 @@ export default function SpotifyParty() {
           </div>
         </div>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="006"
           title="Competitive Analysis"
@@ -464,9 +454,7 @@ export default function SpotifyParty() {
           </div>
         </div>
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="007"
           title="Information Architecture"
@@ -505,9 +493,7 @@ export default function SpotifyParty() {
           ]}
         />
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out`}
-      >
+      <section className="project-section">
         <SectionHeading
           id="008"
           title="Usability Testing"
@@ -576,9 +562,7 @@ export default function SpotifyParty() {
               26.5 seconds"
         />
       </section>
-      <section
-        className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out pb-32`}
-      >
+      <section className="project-section pb-32">
         <SectionHeading id="009" title="Wrapping up" description="" />
         <SectionHeading
           id=""

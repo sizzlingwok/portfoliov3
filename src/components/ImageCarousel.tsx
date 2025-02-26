@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 interface CarouselImage {
@@ -17,6 +17,24 @@ interface ImageCarouselProps {
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const scrollContainerRef = useRef<HTMLUListElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    const handleScroll = () => {
+      const itemWidth = scrollContainer.querySelector("li")?.offsetWidth || 0;
+      const scrollPosition = scrollContainer.scrollLeft;
+      const newIndex = Math.round(scrollPosition / itemWidth);
+
+      if (newIndex !== currentIndex) {
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    scrollContainer.addEventListener("scroll", handleScroll);
+    return () => scrollContainer.removeEventListener("scroll", handleScroll);
+  }, [currentIndex]);
 
   const scrollTo = (index: number) => {
     if (!scrollContainerRef.current) return;
