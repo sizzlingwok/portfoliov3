@@ -1,16 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import MobileMenu from "./MobileMenu";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const navigationItems = (
   <>
-    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
+    <motion.li
+      className="text-[15px] text-lightgray dark:text-dark-lightgray"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: [0.16, 1, 0.3, 1],
+        delay: 0.1,
+      }}
+    >
       <Link href="/about" className="hover:opacity-80">
         About
       </Link>
-    </li>
-    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
+    </motion.li>
+    <motion.li
+      className="text-[15px] text-lightgray dark:text-dark-lightgray"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: [0.16, 1, 0.3, 1],
+        delay: 0.2,
+      }}
+    >
       <a
         href="https://linkedin.com/in/andyduong-"
         className="hover:opacity-80 transition-opacity duration-300"
@@ -19,8 +40,17 @@ const navigationItems = (
       >
         LinkedIn
       </a>
-    </li>
-    <li className="text-[15px] text-lightgray dark:text-dark-lightgray">
+    </motion.li>
+    <motion.li
+      className="text-[15px] text-lightgray dark:text-dark-lightgray"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 1,
+        ease: [0.16, 1, 0.3, 1],
+        delay: 0.3,
+      }}
+    >
       <a
         href="/Andy_Duong_Resume.pdf"
         className="hover:opacity-80 transition-opacity duration-300"
@@ -29,7 +59,7 @@ const navigationItems = (
       >
         Resume
       </a>
-    </li>
+    </motion.li>
   </>
 );
 
@@ -37,7 +67,15 @@ export default function Header() {
   return (
     <header className="w-full py-8 px-8 lg:px-24 transition-[padding] duration-300 ease-in-out relative">
       <nav className="mx-auto flex items-center justify-between">
-        <div className="select-none">
+        <motion.div
+          className="select-none"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
           <Link
             href="/"
             className="hover:opacity-80 transition-opacity duration-300"
@@ -50,14 +88,22 @@ export default function Header() {
               className="object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)] dark:drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)]"
             />
           </Link>
-        </div>
+        </motion.div>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-5 items-center select-none">
           {navigationItems}
-          <li>
+          <motion.li
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 1.6,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.4,
+            }}
+          >
             <ThemeToggle />
-          </li>
+          </motion.li>
         </ul>
 
         {/* Mobile Navigation */}

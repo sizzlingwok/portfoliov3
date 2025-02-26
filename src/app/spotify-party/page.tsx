@@ -1,13 +1,35 @@
 import { Metadata } from "next";
-import Marquee from "react-fast-marquee";
 import SectionHeading from "../../components/SectionHeading";
 import VideoSection from "../../components/VideoSection";
-import MarqueeImage from "../../components/MarqueeImage";
 import ProjectHeader from "../../components/ProjectHeader";
 import CardInfo from "../../components/CardInfo";
 import Image from "next/image";
 import ImageCarousel from "../../components/ImageCarousel";
 import ProjectNavbar from "../../components/ProjectNavbar";
+import MarqueeSection from "../../components/MarqueeSection";
+
+const spotifyImages = [
+  {
+    src: "/images/spotify/queue.png",
+    alt: "Spotify Party Group Session Queue",
+  },
+  {
+    src: "/images/spotify/partyinvite.png",
+    alt: "Spotify Party Invite",
+  },
+  {
+    src: "/images/spotify/joingroupsession.png",
+    alt: "Spotify Party Join Group Session",
+  },
+  {
+    src: "/images/spotify/curatedplaylist.png",
+    alt: "Curated Group Session Playlist",
+  },
+  {
+    src: "/images/spotify/settings.png",
+    alt: "Group Session Settings",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Spotify Party",
@@ -37,30 +59,7 @@ export default function SpotifyParty() {
         timeline="8 weeks (June - July 2023)"
         description="Spotify Party strives to enhance the listening experience for users who enjoy music with others. While creating group sessions already exist on Spotify, it currently falls short in terms of functionality and could greatly benefit from improvements. Spotify Party will not only strengthen its current group session capabilities, but will also introduce captivating new features to foster an immersive and enjoyable journey of music exploration."
       />
-      <section className="marquee overflow-hidden py-20 relative">
-        <Marquee speed={80} direction="left">
-          <MarqueeImage
-            src="/images/spotify/queue.png"
-            alt="Spotify Party Group Session Queue"
-          />
-          <MarqueeImage
-            src="/images/spotify/partyinvite.png"
-            alt="Spotify Party Invite"
-          />
-          <MarqueeImage
-            src="/images/spotify/joingroupsession.png"
-            alt="Spotify Party Join Group Session"
-          />
-          <MarqueeImage
-            src="/images/spotify/curatedplaylist.png"
-            alt="Curated Group Session Playlist"
-          />
-          <MarqueeImage
-            src="/images/spotify/settings.png"
-            alt="Group Session Settings"
-          />
-        </Marquee>
-      </section>
+      <MarqueeSection images={spotifyImages} />
       <section className="project-section">
         <SectionHeading
           id="002"

@@ -31,9 +31,11 @@ const CardInfo: React.FC<CardInfoProps> = ({
         ) : icon ? (
           <div className="flex-shrink-0">{icon}</div>
         ) : null}
-        <p className="font-medium text-lg dark:text-dark-text">{title}</p>
+        <p className="font-medium text-lg 3xl:text-xl dark:text-dark-text">
+          {title}
+        </p>
       </div>
-      <p className="text-lightgray dark:text-dark-lightgray flex-grow">
+      <p className="text-lightgray dark:text-dark-lightgray flex-grow 3xl:text-lg">
         {description}
       </p>
     </div>
