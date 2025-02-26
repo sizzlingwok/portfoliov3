@@ -486,7 +486,7 @@ export default function SpotifyParty() {
             {
               src: {
                 light: "/images/spotify/userflow3-light.png",
-                dark: "/images/spotify/curatedplaylist-dark.png",
+                dark: "/images/spotify/userflow3-dark.png",
               },
               alt: "Finding previous group session playlists",
             },
