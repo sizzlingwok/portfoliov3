@@ -2,11 +2,16 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 
+interface CarouselImage {
+  src: {
+    light: string;
+    dark: string;
+  };
+  alt: string;
+}
+
 interface ImageCarouselProps {
-  images: Array<{
-    src: string;
-    alt: string;
-  }>;
+  images: CarouselImage[];
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
@@ -40,18 +45,24 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           {images.map((image, index) => (
             <li
               key={index}
-              className="relative w-screen md:w-[65vw] shrink-0 snap-center md:first:ml-[33.333vw] md:last:mr-[33.333vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
+              className="relative w-screen md:w-[65vw] shrink-0 snap-center md:first:ml-[17.5vw] md:last:mr-[17.5vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
             >
-              <div className="relative">
+              <div className="relative w-full max-w-[1200px] aspect-video">
                 <Image
-                  src={image.src}
+                  src={image.src.light}
                   alt={image.alt}
-                  width={1200}
-                  height={900}
-                  priority
+                  fill
+                  sizes="(max-width: 768px) 100vw, 65vw"
+                  className="object-contain select-none dark:opacity-0 transition-opacity"
                   draggable={false}
-                  className="object-contain rounded-md w-full h-auto"
-                  sizes="(md) 45vw, 100vw"
+                />
+                <Image
+                  src={image.src.dark}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 65vw"
+                  className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                  draggable={false}
                 />
               </div>
             </li>

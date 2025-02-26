@@ -7,6 +7,7 @@ import ProjectHeader from "../../components/ProjectHeader";
 import CardInfo from "../../components/CardInfo";
 import Image from "next/image";
 import ImageCarousel from "../../components/ImageCarousel";
+import ProjectNavbar from "../../components/ProjectNavbar";
 
 export const metadata: Metadata = {
   title: "Spotify Party",
@@ -17,21 +18,17 @@ export const metadata: Metadata = {
 export default function SpotifyParty() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
-      <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-50">
-        <a
-          href="https://www.figma.com/proto/5ciCRD3R2H8jz0fRfKJPJD/Spotify-Party-Landing-Page?page-id=0%3A1&type=design&node-id=1-2&viewport=1334%2C874%2C0.71&t=MT5QwGlDdOlSKv5J-1&scaling=scale-down"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-sand dark:bg-dark-sand px-6 py-3 rounded-lg flex items-center gap-2 whitespace-nowrap group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10 lg:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:lg:hover:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)]"
-        >
-          <span className="flex items-center gap-2 text-[15px]">
-            View Prototype
-            <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
-              ↗
-            </span>
-          </span>
-        </a>
-      </div>
+      <ProjectNavbar
+        prototypeUrl="https://www.figma.com/proto/5ciCRD3R2H8jz0fRfKJPJD/Spotify-Party-Landing-Page?page-id=0%3A1&type=design&node-id=1-2&viewport=1334%2C874%2C0.71&t=MT5QwGlDdOlSKv5J-1&scaling=scale-down"
+        previousProject={{
+          name: "Readeezy",
+          href: "/readeezy",
+        }}
+        nextProject={{
+          name: "Sorette",
+          href: "/sorette",
+        }}
+      />
       <ProjectHeader
         projectName="Spotify Party"
         projectId="001"
@@ -153,7 +150,7 @@ export default function SpotifyParty() {
               />
               <Image
                 src="/images/spotify/surveyresults1-dark.png"
-                alt="Survey result 1"
+                alt="28% of participants considered themselves an expert Spotify user"
                 fill
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
@@ -213,7 +210,7 @@ export default function SpotifyParty() {
                   />
                 </div>
                 <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
-                  of participants didn’t know about Spotify’s group session
+                  of participants didn't know about Spotify's group session
                   feature
                 </p>
               </div>
@@ -391,28 +388,60 @@ export default function SpotifyParty() {
         />
         <div className="flex justify-center w-full">
           <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto transition-all duration-300 ease-in-out">
-            <Image
-              src="/images/spotify/applemusic.webp"
-              alt="Apple Music"
-              width={256}
-              height={256}
-              className="object-contain select-none transition-transform duration-300 ease-in-out"
-            />
-
-            <Image
-              src="/images/spotify/amazonmusic.webp"
-              alt="Amazon Music"
-              width={256}
-              height={256}
-              className="object-contain select-none transition-transform duration-300 ease-in-out"
-            />
-            <Image
-              src="/images/spotify/youtubemusic.webp"
-              alt="YouTube Music"
-              width={256}
-              height={256}
-              className="object-contain select-none transition-transform duration-300 ease-in-out"
-            />
+            <div className="relative">
+              <Image
+                src="/images/spotify/applemusic-light.png"
+                alt="Apple Music"
+                width={256}
+                height={256}
+                className="object-contain select-none dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/applemusic-dark.png"
+                alt="Apple Music"
+                width={256}
+                height={256}
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/spotify/amazonmusic-light.png"
+                alt="Amazon Music"
+                width={256}
+                height={256}
+                className="object-contain select-none dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/amazonmusic-dark.png"
+                alt="Amazon Music"
+                width={256}
+                height={256}
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+            <div className="relative">
+              <Image
+                src="/images/spotify/youtubemusic-light.png"
+                alt="YouTube Music"
+                width={256}
+                height={256}
+                className="object-contain select-none dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/youtubemusic-dark.png"
+                alt="YouTube Music"
+                width={256}
+                height={256}
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
           </div>
         </div>
         <div className="flex justify-center">
@@ -446,24 +475,32 @@ export default function SpotifyParty() {
         <ImageCarousel
           images={[
             {
-              src: "/images/spotify/queue.png",
-              alt: "Spotify Party Group Session Queue",
+              src: {
+                light: "/images/spotify/sitemap-light.png",
+                dark: "/images/spotify/sitemap-dark.png",
+              },
+              alt: "Spotify Party Sitemap",
             },
             {
-              src: "/images/spotify/partyinvite.png",
-              alt: "Spotify Party Invite",
+              src: {
+                light: "/images/spotify/userflow1-light.png",
+                dark: "/images/spotify/userflow1-dark.png",
+              },
+              alt: "Inviting friends to a group session",
             },
             {
-              src: "/images/spotify/joingroupsession.png",
-              alt: "Spotify Party Join Group Session",
+              src: {
+                light: "/images/spotify/userflow2-light.png",
+                dark: "/images/spotify/userflow2-dark.png",
+              },
+              alt: "Accepting a group session invitation",
             },
             {
-              src: "/images/spotify/curatedplaylist.png",
-              alt: "Curated Group Session Playlist",
-            },
-            {
-              src: "/images/spotify/settings.png",
-              alt: "Group Session Settings",
+              src: {
+                light: "/images/spotify/userflow3-light.png",
+                dark: "/images/spotify/curatedplaylist-dark.png",
+              },
+              alt: "Finding previous group session playlists",
             },
           ]}
         />
@@ -476,31 +513,68 @@ export default function SpotifyParty() {
           title="Usability Testing"
           description="Evaluating the Spotify Party prototype"
         />
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
-            <CardInfo
-              title="Michelle"
-              description="Michelle, a party enthusiast, creates perfect playlists for
-                  her events. Prior to each gathering, she dedicates herself to
-                  selecting tracks, ensuring an unforgettable experience. In her
-                  quest for new music, she dreams of a feature allowing guests
-                  to queue up favorite tracks with a voting system for an
-                  enhanced party experience."
-              image="/images/spotify/michelle.webp"
-            />
-            <CardInfo
-              title="Edward"
-              description="Edward is an avid music listener who loves to play songs with
-                  his friends. He recently found out about the group session
-                  feature Spotify implemented. He likes the idea of such
-                  feature, but finds it tedious to constantly invite his friends
-                  through links to listen along with him. He wishes there was a
-                  better invitation system in place so he can continue to invite
-                  the same friends to his sessions."
-              image="/images/spotify/edward.webp"
-            />
+        <SectionHeading
+          title="Second click test"
+          description="I conducted a second first-click test involving 9 new participants to assess how well users grasped tasks within the Spotify Party prototype.
+              The test encompassed demonstrations of both mobile and desktop versions,
+              with a specific emphasis on participants' capability to initiate a
+              group session."
+        />
+        <div className="flex flex-col justify-center items-center w-full gap-4">
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative max-w-[256px] w-full aspect-[1/1]">
+              <Image
+                src="/images/spotify/surveyresults3-light.png"
+                alt="77% of participants successfully completed the task"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/surveyresults3-dark.png"
+                alt="77% of participants successfully completed the task"
+                fill
+                sizes="256px"
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
+            <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
+              of participants successfully completed the task
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative w-fit mb-4">
+              <Image
+                src="/images/spotify/secondclicktest-light.png"
+                alt="Second click test"
+                width={1024}
+                height={128}
+                className="object-contain select-none dark:opacity-0 transition-opacity"
+                draggable={false}
+              />
+              <Image
+                src="/images/spotify/secondclicktest-dark.png"
+                alt="Second click test"
+                width={1024}
+                height={128}
+                className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
+                draggable={false}
+              />
+            </div>
           </div>
         </div>
+        <SectionHeading
+          id=""
+          title="Survey results"
+          description="With a completion rate surpassing 77%, the results bly indicate
+              that the Spotify Party prototype exhibits a higher level of
+              intuitiveness and user-friendliness in comparison to Spotify's
+              current user interface. Participants were able to quickly navigate
+              to the corresponding interaction with an average time taken of
+              26.5 seconds"
+        />
       </section>
       <section
         className={`content px-8 pt-32 md:pt-64 flex flex-col gap-8 md:gap-20 select-none lg:px-24 transition-[padding] duration-300 ease-in-out pb-32`}
