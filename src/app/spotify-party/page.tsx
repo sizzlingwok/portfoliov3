@@ -458,7 +458,7 @@ export default function SpotifyParty() {
         <SectionHeading
           id="007"
           title="Information Architecture"
-          description="A structured approach to organizing and presenting information"
+          description="Here I have created a sitemap for Spotify Party as well as provided 3 user flows to showcase the core functionality of the features. The flows include: inviting friends to a group session, accepting a group session invitation, and finding previous group session playlists."
         />
         <ImageCarousel
           images={[
