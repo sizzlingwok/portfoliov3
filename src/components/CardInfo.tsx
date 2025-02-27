@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import React, { ReactNode } from "react";
 
@@ -14,8 +17,23 @@ const CardInfo: React.FC<CardInfoProps> = ({
   icon,
   image,
 }) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-40% 0px -40% 0px",
+  });
+
   return (
-    <div className="bg-sand dark:bg-dark-sand rounded-lg p-8 flex flex-col gap-4 ring-2 ring-black/10 dark:ring-white/10 shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)] h-full">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{
+        duration: 1.6,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      className="bg-sand dark:bg-dark-sand rounded-lg p-8 flex flex-col gap-4 ring-2 ring-black/10 dark:ring-white/10 shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.05)] dark:shadow-[inset_0_-2px_0_0_rgba(255,255,255,0.05)] h-full max-w-[480px]"
+    >
       <div className="flex items-center gap-4 min-h-[32px]">
         {image ? (
           <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 select-none">
@@ -38,7 +56,7 @@ const CardInfo: React.FC<CardInfoProps> = ({
       <p className="text-lightgray dark:text-dark-lightgray flex-grow 3xl:text-lg">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

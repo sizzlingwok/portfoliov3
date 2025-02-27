@@ -217,7 +217,7 @@ export default function SpotifyParty() {
           description="Only 28% of users successfully found the menu, highlighting its unintuitive placement. As a result, the group session feature is often overlooked, further impacted by its limited functionality."
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl justify-items-center">
             <CardInfo
               title="Users Struggle to Invite Friends"
               description="Users have difficulty in inviting friends. The user onboarding msut be enhanced to provide a more intuitive experience for those wishing to invite and join friends"
@@ -339,26 +339,15 @@ export default function SpotifyParty() {
           description="Introducing Michelle & Edward"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center">
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl justify-items-center">
             <CardInfo
               title="Michelle"
-              description="Michelle, a party enthusiast, creates perfect playlists for
-                  her events. Prior to each gathering, she dedicates herself to
-                  selecting tracks, ensuring an unforgettable experience. In her
-                  quest for new music, she dreams of a feature allowing guests
-                  to queue up favorite tracks with a voting system for an
-                  enhanced party experience."
+              description="Michelle, a passionate party enthusiast, curates playlists for her events. Before each gathering, she meticulously selects tracks to ensure an unforgettable experience. In her pursuit of discovering new music, she envisions a feature where guests can queue up their favorite tracks using a voting system, promising an enhanced party atmosphere."
               image="/images/spotify/michelle.webp"
             />
             <CardInfo
               title="Edward"
-              description="Edward is an avid music listener who loves to play songs with
-                  his friends. He recently found out about the group session
-                  feature Spotify implemented. He likes the idea of such
-                  feature, but finds it tedious to constantly invite his friends
-                  through links to listen along with him. He wishes there was a
-                  better invitation system in place so he can continue to invite
-                  the same friends to his sessions."
+              description="Edward is a dedicated music lover who enjoys sharing songs with his friends. He recently discovered Spotify's group session feature and appreciates the concept but finds the current invitation process cumbersome. He desires a more seamless invitation system that allows him to effortlessly invite the same group of friends to join his listening sessions"
               image="/images/spotify/edward.webp"
             />
           </div>

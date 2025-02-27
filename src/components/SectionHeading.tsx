@@ -1,4 +1,8 @@
+"use client";
+
 import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface SectionHeadingProps {
   id?: string;
@@ -14,19 +18,55 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   description,
   children,
 }) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const shouldAnimate = id && title && description;
+
   return (
-    <div className="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] gap-4 md:gap-x-8 3xl:text-lg items-baseline w-full">
+    <div
+      ref={ref}
+      className="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] gap-4 md:gap-x-8 3xl:text-lg items-baseline w-full"
+    >
       {id ? (
-        <p className="font-medium text-xl dark:text-dark-text">{id}</p>
+        <motion.p
+          className="font-medium text-xl dark:text-dark-text"
+          initial={shouldAnimate ? { opacity: 0 } : false}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{
+            duration: 3,
+            ease: [0.16, 1, 0.3, 1],
+            delay: 0.1,
+          }}
+        >
+          {id}
+        </motion.p>
       ) : (
         <div className="hidden md:block md:col-start-1"></div>
       )}
-      <p className="font-medium text-xl dark:text-dark-text md:col-start-2">
+      <motion.p
+        className="font-medium text-xŹl dark:text-dark-text md:col-start-2"
+        initial={shouldAnimate ? { y: 20, opacity: 0 } : false}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{
+          duration: 1.6,
+          ease: [0.16, 1, 0.3, 1],
+          delay: 0.3,
+        }}
+      >
         {title}
-      </p>
-      <p className="text-lightgray dark:text-dark-lightgray md:col-start-3">
+      </motion.p>
+      <motion.p
+        className="text-lightgray dark:text-dark-lightgray md:col-start-3"
+        initial={shouldAnimate ? { y: 20, opacity: 0 } : false}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{
+          duration: 1.6,
+          ease: [0.16, 1, 0.3, 1],
+          delay: 0.5,
+        }}
+      >
         {description}
-      </p>
+      </motion.p>
       {children && <div className="col-span-full mt-4">{children}</div>}
     </div>
   );

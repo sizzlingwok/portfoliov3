@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 interface CarouselImage {
   src: {
@@ -17,6 +18,11 @@ interface ImageCarouselProps {
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const scrollContainerRef = useRef<HTMLUListElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-40% 0px -40% 0px",
+  });
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -49,7 +55,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative w-screen left-[50%] right-[50%] -mx-[50vw] max-w-none overflow-hidden">
+    <motion.div
+      ref={ref}
+      initial={{ filter: "blur(25px)", opacity: 0 }}
+      animate={isInView ? { filter: "blur(0px)", opacity: 1 } : {}}
+      transition={{
+        duration: 1.6,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      className="relative w-screen left-[50%] right-[50%] -mx-[50vw] max-w-none overflow-hidden"
+    >
       <div className="relative">
         <ul
           ref={scrollContainerRef}
@@ -110,7 +125,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
