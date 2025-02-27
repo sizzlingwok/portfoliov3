@@ -56,7 +56,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
         {title}
       </motion.p>
       <motion.p
-        className="text-lightgray dark:text-dark-lightgray md:col-start-3"
+        className="text-lightgray dark:text-dark-lightgray md:col-start-3 max-w-[700px]"
         initial={shouldAnimate ? { y: 20, opacity: 0 } : false}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{

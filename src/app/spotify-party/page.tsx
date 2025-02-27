@@ -276,7 +276,7 @@ export default function SpotifyParty() {
           description="How can we revitalize group listening and enhance accessbility?"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] place-items-center transition-[grid-template-columns] duration-300 ease-in-out">
             <CardInfo
               title="Group session feature is hard to find"
               description="The option to start a group session is buried in the device list, making it easy to overlook."
