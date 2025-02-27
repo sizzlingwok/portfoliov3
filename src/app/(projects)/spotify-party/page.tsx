@@ -152,7 +152,7 @@ export default function SpotifyParty() {
           <SectionHeading title="But.." description="" />
 
           <div className="flex flex-col justify-center items-center w-full gap-8">
-            <div className="flex flex-row justify-center gap-16 w-full flex-wrap">
+            <div className="flex flex-wrap gap-16 md:gap-32 justify-center items-center max-w-7xl mx-auto">
               <div className="flex flex-col items-center gap-4">
                 <div className="relative max-w-[256px] w-full aspect-[1/1]">
                   <Image
@@ -222,15 +222,16 @@ export default function SpotifyParty() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="2"
                   stroke="#1DB954"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="size-6"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                  />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="M2 21a8 8 0 0 1 10.434-7.62" />
+                  <circle cx="18" cy="18" r="3" />
+                  <path d="m22 22-1.9-1.9" />
                 </svg>
               }
             />
@@ -242,15 +243,14 @@ export default function SpotifyParty() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="2"
                   stroke="#1DB954"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="size-6"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-                  />
+                  <polygon points="13 19 22 12 13 5 13 19" />
+                  <polygon points="2 19 11 12 2 5 2 19" />
                 </svg>
               }
             />
@@ -297,11 +297,11 @@ export default function SpotifyParty() {
                   stroke="#1DB954"
                   className="size-6"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-                  />
+                  <path d="M13 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                  <path d="m22 3-5 5" />
+                  <path d="m17 3 5 5" />
                 </svg>
               }
             />
@@ -317,11 +317,10 @@ export default function SpotifyParty() {
                   stroke="#1DB954"
                   className="size-6"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
-                  />
+                  <path d="M2 21a8 8 0 0 1 11.873-7" />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="m17 17 5 5" />
+                  <path d="m22 17-5 5" />
                 </svg>
               }
             />
@@ -361,7 +360,7 @@ export default function SpotifyParty() {
               insights in the process."
         />
         <div className="flex justify-center w-full">
-          <div className="flex flex-wrap gap-8 justify-center items-center max-w-7xl mx-auto transition-all duration-300 ease-in-out">
+          <div className="flex flex-wrap gap-16 md:gap-32 justify-center items-center max-w-7xl mx-auto transition-all duration-300 ease-in-out">
             <div className="relative">
               <Image
                 src="/images/spotify/applemusic-light.png"

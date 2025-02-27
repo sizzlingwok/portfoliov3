@@ -48,13 +48,20 @@ export const metadata: Metadata = {
     "Hello I'm Andy Duong — UX Designer based in the Bay Area, creating meaningful narratives driven by my passion for music and art.",
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={SFPro.variable}>
+    <html lang="en" className={SFPro.variable} suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>
-      <body className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text">
+      <body
+        className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text"
+        suppressHydrationWarning
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="layout min-h-screen flex flex-col">
             <Header />

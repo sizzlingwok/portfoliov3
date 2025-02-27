@@ -40,7 +40,7 @@ export default function sorette() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
       <ProjectHeader
-        projectName="Spotify Party"
+        projectName="sorette"
         projectId="001"
         role="UX Design, User Research, Visual Design, Prototyping"
         tools="Figma, Google Forms, Optimal Workshop, After Effects"
