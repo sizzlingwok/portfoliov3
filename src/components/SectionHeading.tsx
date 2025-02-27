@@ -1,8 +1,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 interface SectionHeadingProps {
   id?: string;
@@ -20,7 +19,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const shouldAnimate = id && title && description;
+  const shouldAnimate = !!id;
 
   return (
     <div
