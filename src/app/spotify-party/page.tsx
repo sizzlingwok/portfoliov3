@@ -107,6 +107,7 @@ export default function SpotifyParty() {
               height={128}
               className="object-contain select-none dark:opacity-0 transition-opacity"
               draggable={false}
+              loading="lazy"
             />
             <Image
               src="/images/spotify/firstclicktest-dark.png"
@@ -115,6 +116,7 @@ export default function SpotifyParty() {
               height={128}
               className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
               draggable={false}
+              loading="lazy"
             />
           </div>
 
@@ -142,6 +144,7 @@ export default function SpotifyParty() {
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/surveyresults1-dark.png"
@@ -150,6 +153,7 @@ export default function SpotifyParty() {
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
             <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
@@ -170,6 +174,7 @@ export default function SpotifyParty() {
                     sizes="256px"
                     className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
                     draggable={false}
+                    loading="lazy"
                   />
                   <Image
                     src="/images/spotify/surveyresults1-dark.png"
@@ -178,6 +183,7 @@ export default function SpotifyParty() {
                     sizes="256px"
                     className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                     draggable={false}
+                    loading="lazy"
                   />
                 </div>
                 <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
@@ -194,6 +200,7 @@ export default function SpotifyParty() {
                     sizes="256px"
                     className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
                     draggable={false}
+                    loading="lazy"
                   />
                   <Image
                     src="/images/spotify/surveyresults2-dark.png"
@@ -202,6 +209,7 @@ export default function SpotifyParty() {
                     sizes="256px"
                     className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                     draggable={false}
+                    loading="lazy"
                   />
                 </div>
                 <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
@@ -374,6 +382,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/applemusic-dark.png"
@@ -382,6 +391,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
             <div className="relative">
@@ -392,6 +402,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/amazonmusic-dark.png"
@@ -400,6 +411,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
             <div className="relative">
@@ -410,6 +422,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/youtubemusic-dark.png"
@@ -418,6 +431,7 @@ export default function SpotifyParty() {
                 height={256}
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
           </div>
@@ -504,6 +518,7 @@ export default function SpotifyParty() {
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/surveyresults3-dark.png"
@@ -512,6 +527,7 @@ export default function SpotifyParty() {
                 sizes="256px"
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
             <p className=" text-lightgray dark:text-dark-lightgray 3xl:text-lg text-center max-w-[256px]">
@@ -527,6 +543,7 @@ export default function SpotifyParty() {
                 height={128}
                 className="object-contain select-none dark:opacity-0 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
               <Image
                 src="/images/spotify/secondclicktest-dark.png"
@@ -535,6 +552,7 @@ export default function SpotifyParty() {
                 height={128}
                 className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
                 draggable={false}
+                loading="lazy"
               />
             </div>
           </div>
