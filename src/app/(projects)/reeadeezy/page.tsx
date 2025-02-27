@@ -1,4 +1,4 @@
-import MarqueeSection from "../../components/MarqueeSection";
+import MarqueeSection from "../../../components/MarqueeSection";
 
 const readeezyImages = [
   {

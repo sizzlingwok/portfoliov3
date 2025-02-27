@@ -2,24 +2,25 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { getProjectNavigation } from "../config/projects";
 
-interface ProjectNavbarProps {
-  prototypeUrl: string;
-  previousProject?: {
-    name: string;
-    href: string;
-  };
-  nextProject?: {
-    name: string;
-    href: string;
-  };
-}
+const ProjectNavbar = () => {
+  const pathname = usePathname();
+  const { current, previous, next } = getProjectNavigation(pathname);
 
-const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
-  prototypeUrl,
-  previousProject,
-  nextProject,
-}) => {
+  const tooltipVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
   return (
     <motion.div
       className="fixed bottom-2 left-0 right-0 mx-auto w-fit z-50"
@@ -55,7 +56,7 @@ const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
           }}
         >
           <ul className="flex items-center gap-6">
-            {previousProject && (
+            {previous && (
               <motion.li
                 className="group"
                 initial={{ y: 20, opacity: 0 }}
@@ -69,17 +70,17 @@ const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
                 }}
               >
                 <Link
-                  href={previousProject.href}
+                  href={previous.path}
                   className="flex items-center relative px-2 py-2"
-                  aria-label={`Previous Project: ${previousProject.name}`}
+                  aria-label={`Previous Project: ${previous.name}`}
                 >
                   <div className="w-4 h-4 flex items-center justify-center">
                     <span className="text-[15px] transition-transform duration-500 group-hover:-translate-x-1">
                       ←
                     </span>
                   </div>
-                  <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-black/80 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                    {previousProject.name}
+                  <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-black/80 text-white rounded opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none whitespace-nowrap">
+                    {previous.name}
                   </span>
                 </Link>
               </motion.li>
@@ -98,7 +99,7 @@ const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
               }}
             >
               <a
-                href={prototypeUrl}
+                href={current.prototypeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -112,7 +113,7 @@ const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
               </a>
             </motion.li>
 
-            {nextProject && (
+            {next && (
               <motion.li
                 className="group"
                 initial={{ y: 40, opacity: 0 }}
@@ -126,17 +127,17 @@ const ProjectNavbar: React.FC<ProjectNavbarProps> = ({
                 }}
               >
                 <Link
-                  href={nextProject.href}
+                  href={next.path}
                   className="flex items-center relative px-2 py-2"
-                  aria-label={`Next Project: ${nextProject.name}`}
+                  aria-label={`Next Project: ${next.name}`}
                 >
                   <div className="w-4 h-4 flex items-center justify-center">
                     <span className="text-[15px] transition-transform duration-500 group-hover:translate-x-1">
                       →
                     </span>
                   </div>
-                  <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-black/80 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                    {nextProject.name}
+                  <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-black/80 text-white rounded opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none whitespace-nowrap">
+                    {next.name}
                   </span>
                 </Link>
               </motion.li>

@@ -1,14 +1,13 @@
 import { Metadata } from "next";
-import SectionHeading from "../../components/SectionHeading";
-import VideoSection from "../../components/VideoSection";
-import ProjectHeader from "../../components/ProjectHeader";
-import CardInfo from "../../components/CardInfo";
+import SectionHeading from "@/components/SectionHeading";
+import VideoSection from "@/components/VideoSection";
+import ProjectHeader from "@/components/ProjectHeader";
+import CardInfo from "@/components/CardInfo";
 import Image from "next/image";
-import ImageCarousel from "../../components/ImageCarousel";
-import ProjectNavbar from "../../components/ProjectNavbar";
-import MarqueeSection from "../../components/MarqueeSection";
+import ImageCarousel from "@/components/ImageCarousel";
+import MarqueeSection from "@/components/MarqueeSection";
 
-const spotifyImages = [
+const marqueeImages = [
   {
     src: "/images/spotify/queue.png",
     alt: "Spotify Party Group Session Queue",
@@ -40,17 +39,6 @@ export const metadata: Metadata = {
 export default function SpotifyParty() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
-      <ProjectNavbar
-        prototypeUrl="https://www.figma.com/proto/5ciCRD3R2H8jz0fRfKJPJD/Spotify-Party-Landing-Page?page-id=0%3A1&type=design&node-id=1-2&viewport=1334%2C874%2C0.71&t=MT5QwGlDdOlSKv5J-1&scaling=scale-down"
-        previousProject={{
-          name: "Readeezy AI Reading Companion",
-          href: "/readeezy",
-        }}
-        nextProject={{
-          name: "sorette",
-          href: "/sorette",
-        }}
-      />
       <ProjectHeader
         projectName="Spotify Party"
         projectId="001"
@@ -59,7 +47,7 @@ export default function SpotifyParty() {
         timeline="8 weeks (June - July 2023)"
         description="Spotify Party strives to enhance the listening experience for users who enjoy music with others. While creating group sessions already exist on Spotify, it currently falls short in terms of functionality and could greatly benefit from improvements. Spotify Party will not only strengthen its current group session capabilities, but will also introduce captivating new features to foster an immersive and enjoyable journey of music exploration."
       />
-      <MarqueeSection images={spotifyImages} />
+      <MarqueeSection images={marqueeImages} />
       <section className="project-section">
         <SectionHeading
           id="002"
