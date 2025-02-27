@@ -44,7 +44,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
         <div className="hidden md:block md:col-start-1"></div>
       )}
       <motion.p
-        className="font-medium text-xŹl dark:text-dark-text md:col-start-2"
+        className="font-medium text-xl dark:text-dark-text md:col-start-2"
         initial={shouldAnimate ? { y: 20, opacity: 0 } : false}
         animate={isInView ? { y: 0, opacity: 1 } : {}}
         transition={{
