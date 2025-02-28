@@ -3,7 +3,7 @@
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigationItems = (
   <>
@@ -111,20 +111,31 @@ export default function Header() {
   return (
     <>
       {/* Mobile Header (visible below md breakpoint) */}
-      <div className="fixed top-0 left-0 right-0 z-50 md:hidden">
-        <div className="flex justify-center p-4">
-          <div className="bg-sand dark:bg-dark-sand px-6 py-3 rounded-lg flex items-center gap-2 whitespace-nowrap group transition-[background-color,box-shadow] duration-500 ease-in-out">
-            <ul className="flex items-center gap-6">
-              {mobileNavItems}
-              <li>
-                <div className="[&>button]:hover:ring-0 [&>button]:hover:shadow-none [&>button]:px-2">
-                  <ThemeToggle enableHover={true} />
-                </div>
-              </li>
-            </ul>
+      <AnimatePresence>
+        <motion.div
+          className="fixed top-0 left-0 right-0 z-50 md:hidden"
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          <div className="flex justify-center p-4">
+            <div className="bg-sand dark:bg-dark-sand px-6 py-3 rounded-lg flex items-center gap-2 whitespace-nowrap group transition-[background-color,box-shadow] duration-500 ease-in-out">
+              <ul className="flex items-center gap-6">
+                {mobileNavItems}
+                <li>
+                  <div className="[&>button]:hover:ring-0 [&>button]:hover:shadow-none [&>button]:px-2">
+                    <ThemeToggle enableHover={true} />
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Desktop Header (original design, visible above md breakpoint) */}
       <header className="hidden md:block w-full py-8 px-8 lg:px-24 transition-[padding] duration-300 ease-in-out relative">
