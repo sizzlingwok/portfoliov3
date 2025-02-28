@@ -41,9 +41,10 @@ const VideoSection: React.FC<VideoSectionProps> = ({
           muted
           playsInline
           loop
+          preload="none"
           className="w-full rounded-md shadow-md"
         >
-          <source src={`/videos/spotify/${videoId}.mp4`} type="video/mp4" />
+          <source src={`/videos/${videoId}.mp4`} type="video/mp4" />
         </video>
       </motion.div>
       <div className="video-description flex flex-col w-full md:w-1/2 md:text-left gap-2">

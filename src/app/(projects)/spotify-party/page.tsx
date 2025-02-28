@@ -60,17 +60,17 @@ export default function SpotifyParty() {
       <section className="video-section px-8 py-8 md:py-20 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out 3xl:text-lg md:flex-row">
         <div className="content-container flex flex-col gap-8 items-center justify-center w-full mx-auto">
           <VideoSection
-            videoId="spotifyinvitefriends"
+            videoId="spotify/spotifyinvitefriends"
             title="Inviting friends"
             description="Easily invite friends directly within the app eliminating the need for external invitations through links or social media"
           />
           <VideoSection
-            videoId="spotifygroupsettings"
+            videoId="spotify/spotifygroupsettings"
             title="Group settings"
             description="Streamline your sessions with customizable group settings. Delegate moderation privileges and fine-tune options for a more enjoyable experience"
           />
           <VideoSection
-            videoId="spotifysessionplaylist"
+            videoId="spotify/spotifysessionplaylist"
             title="Curated playlists"
             description="Rediscover past group sessions with curated playlists of previously played tracks. Replay any missed songs or effortlessly share playlists with others"
           />
@@ -337,7 +337,7 @@ export default function SpotifyParty() {
           <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl justify-items-center">
             <CardInfo
               title="Michelle"
-              description="Michelle, a passionate party enthusiast, curates playlists for her events. Before each gathering, she meticulously selects tracks to ensure an unforgettable experience. In her pursuit of discovering new music, she envisions a feature where guests can queue up their favorite tracks using a voting system, promising an enhanced party atmosphere."
+              description="Michelle, a passionate party enthusiast, curates playlists for her events. Before each gathering, she meticulously selects tracks to ensure an unforgettable experience. In her pursuit of discovering new music, she envisions a feature where guests can queue up their favorite tracks using a voting system, promising an enhanced party atmosphere"
               image="/images/spotify/michelle.webp"
             />
             <CardInfo
