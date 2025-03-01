@@ -86,32 +86,31 @@ const ProjectNavbar = () => {
               </motion.li>
             )}
 
-            <motion.li
-              className="group"
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 250,
-                damping: 15,
-                mass: 0.8,
-                delay: 0.7,
-              }}
-            >
-              <a
-                href={current.prototypeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
+            {current?.url && (
+              <motion.li
+                className="group"
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 15,
+                  mass: 0.8,
+                  delay: 0.7,
+                }}
               >
-                <span className="flex items-center gap-2 text-[15px]">
-                  View Prototype
-                  <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
-                    ↗
+                <a
+                  href={current.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <span className="flex items-center gap-2 text-[15px]">
+                    {current.buttonText}
                   </span>
-                </span>
-              </a>
-            </motion.li>
+                </a>
+              </motion.li>
+            )}
 
             {next && (
               <motion.li
