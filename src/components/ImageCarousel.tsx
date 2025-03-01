@@ -80,23 +80,25 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
               key={index}
               className="relative w-screen md:w-[65vw] shrink-0 snap-center md:first:ml-[17.5vw] md:last:mr-[17.5vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
             >
-              <div className="relative w-full max-w-[1200px] aspect-video">
-                <Image
-                  src={image.src.light}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 65vw"
-                  className="object-contain select-none dark:opacity-0 transition-opacity"
-                  draggable={false}
-                />
-                <Image
-                  src={image.src.dark}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 65vw"
-                  className="object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity"
-                  draggable={false}
-                />
+              <div className="relative w-full rounded-md overflow-hidden">
+                <div className="relative">
+                  <Image
+                    src={image.src.light}
+                    alt={image.alt}
+                    className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
+                    draggable={false}
+                    width={1200}
+                    height={675}
+                  />
+                  <Image
+                    src={image.src.dark}
+                    alt={image.alt}
+                    className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
+                    draggable={false}
+                    width={1200}
+                    height={675}
+                  />
+                </div>
               </div>
             </li>
           ))}
