@@ -50,20 +50,18 @@ interface ThemeToggleProps {
 }
 
 export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
-  const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
-    setTheme("system");
   }, []);
 
   if (!mounted) return null;
 
   return (
     <button
-      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       className="bg-sand dark:bg-dark-sand px-4 py-2 rounded-lg flex items-center gap-2 group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10"
       aria-label="Toggle theme"
     >
@@ -74,7 +72,7 @@ export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
             : ""
         }
       >
-        {currentTheme === "light" ? <MoonIcon /> : <SunIcon />}
+        {resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
       </span>
     </button>
   );

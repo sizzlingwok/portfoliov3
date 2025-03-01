@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { projects } from "@/config/projects";
 import SectionHeading from "@/components/SectionHeading";
 import VideoSection from "@/components/VideoSection";
 import ProjectHeader from "@/components/ProjectHeader";
@@ -30,10 +31,11 @@ const marqueeImages = [
   },
 ];
 
+const project = projects.find((p) => p.path === "/spotify-party")!;
+
 export const metadata: Metadata = {
-  title: "Spotify Party",
-  description:
-    "Spotify Party strives to enhance the listening experience for users who enjoy music with others.",
+  title: project.name,
+  description: project.description,
 };
 
 export default function SpotifyParty() {
@@ -560,21 +562,12 @@ export default function SpotifyParty() {
         <SectionHeading
           id=""
           title="Project Takeaways"
-          description="Inspired by the limitations of Spotify's group session
-                  feature, I created Spotify Party to explore innovative designs
-                  and enhance my app organization skills. The project refined my
-                  smart animate techniques and visual continuity, marking my
-                  first responsive design for both desktop and mobile platforms."
+          description="Inspired by the limitations of Spotify's group session feature, I created Spotify Party to explore innovative designs and enhance my app organization skills. The project refined my smart animate techniques and visual continuity, marking my first responsive design for both desktop and mobile platforms."
         />
         <SectionHeading
           id=""
           title="Things I would do differently"
-          description="In hindsight, I devoted considerable time to manual tasks like
-                  copying album cover arts and track information, which
-                  prolonged the design phase. Reflecting on this, I realize I
-                  could have streamlined the process by reusing assets and
-                  focusing more on functional aspects to expedite project
-                  completion."
+          description="In hindsight, I devoted considerable time to manual tasks like copying album cover arts and track information, which prolonged the design phase. Reflecting on this, I realize I could have streamlined the process by reusing assets and focusing more on functional aspects to expedite project completion."
         />
       </section>
     </main>

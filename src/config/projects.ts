@@ -27,7 +27,8 @@ export const projects: Project[] = [
     id: "003",
     name: "sorette",
     path: "/sorette",
-    prototypeUrl: "https://www.figma.com/proto/...",
+    prototypeUrl:
+      "https://www.figma.com/proto/gAKgOfJEIndvJweTn2Yg0l/sorette?page-id=0%3A1&type=design&node-id=1-51&viewport=-1204%2C721%2C0.42&scaling=scale-down&starting-point-node-id=1%3A51",
     description:
       "Cloud sharing platform streamlining music collaboration with others",
   },
@@ -35,6 +36,8 @@ export const projects: Project[] = [
     id: "004",
     name: "mechmarket",
     path: "/mechmarket",
+    prototypeUrl:
+      "https://www.figma.com/proto/o8NlugV7QcyQ7C078psBlQ/mechmarket?page-id=0%3A1&type=design&node-id=6-171&viewport=626%2C762%2C0.34&t=ilETHb1OZwM2IwUG-1&scaling=scale-down&starting-point-node-id=197%3A12181&mode=design",
     description:
       "Mobile marketplace app dedicated to buying and selling keyboard related products",
   },

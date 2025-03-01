@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { projects } from "@/config/projects";
 import SectionHeading from "@/components/SectionHeading";
 import VideoSection from "@/components/VideoSection";
 import ProjectHeader from "@/components/ProjectHeader";
@@ -30,10 +31,11 @@ const marqueeImages = [
   },
 ];
 
+const project = projects.find((p) => p.path === "/sorette")!;
+
 export const metadata: Metadata = {
-  title: "sorette",
-  description:
-    "Cloud sharing platform streamlining music collaboration with others",
+  title: project.name,
+  description: project.description,
 };
 
 export default function sorette() {
@@ -57,7 +59,7 @@ for music professionals, offering seamless collaboration
         <SectionHeading
           id="002"
           title="Final Solution"
-          description="Evolving the group listening experience by introducing Bridging the gaps in features missing from curren cloud sharing platforms enhancing the music collaboration experience"
+          description="Evolving the group listening experience by bridging gaps in features currently missing from cloud sharing platforms to enhance the music collaboration experience"
         />
       </section>
 
