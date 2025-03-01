@@ -51,17 +51,44 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, theme, systemTheme, setTheme } = useTheme();
 
+  // Only render after mount to prevent hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  // Set theme to system on initial load
+  useEffect(() => {
+    if (theme !== "system") {
+      setTheme("system");
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Log theme changes
+  useEffect(() => {
+    console.log({
+      systemPreference: systemTheme,
+      websiteTheme: theme,
+      resolvedTheme: resolvedTheme,
+    });
+  }, [systemTheme, theme, resolvedTheme]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        // If we're in system mode, switch to explicit theme
+        if (theme === "system") {
+          setTheme(systemTheme === "dark" ? "light" : "dark");
+        } else {
+          // If we're in explicit theme mode, switch back to system
+          setTheme("system");
+        }
+      }}
       className="bg-sand dark:bg-dark-sand px-4 py-2 rounded-lg flex items-center gap-2 group transition-[background-color,box-shadow] duration-500 ease-in-out lg:hover:ring-2 lg:hover:ring-black/10 dark:lg:hover:ring-white/10"
       aria-label="Toggle theme"
     >

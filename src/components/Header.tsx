@@ -76,6 +76,7 @@ const mobileNavItems = (
           width={24}
           height={24}
           className="object-contain"
+          priority={true}
         />
       </Link>
     </li>
