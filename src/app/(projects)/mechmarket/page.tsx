@@ -390,31 +390,31 @@ export default function sorette() {
           images={[
             {
               src: {
-                light: "/images/sorette/midfi1.png",
-                dark: "/images/sorette/midfi1.png",
+                light: "/images/mechmarket/lofi1.png",
+                dark: "/images/mechmarket/lofi1.png",
               },
-              alt: "sorette homepage prototype",
+              alt: "mechmarket lofi prototype",
             },
             {
               src: {
-                light: "/images/sorette/midfi2.png",
-                dark: "/images/sorette/midfi2.png",
+                light: "/images/mechmarket/lofi2.png",
+                dark: "/images/mechmarket/lofi2.png",
               },
-              alt: "sorette library prototype",
+              alt: "mechmarket lofi prototype",
             },
             {
               src: {
-                light: "/images/sorette/midfi3.png",
-                dark: "/images/sorette/midfi3.png",
+                light: "/images/mechmarket/lofi3.png",
+                dark: "/images/mechmarket/lofi3.png",
               },
-              alt: "sorette projects prototype",
+              alt: "mechmarket lofi prototype",
             },
             {
               src: {
-                light: "/images/sorette/midfi4.png",
-                dark: "/images/sorette/midfi4.png",
+                light: "/images/mechmarket/lofi4.png",
+                dark: "/images/mechmarket/lofi4.png",
               },
-              alt: "sorette projects folder prototype",
+              alt: "mechmarket lofi prototype",
             },
           ]}
         />
@@ -494,29 +494,29 @@ export default function sorette() {
           images={[
             {
               src: {
-                light: "/images/sorette/sitemap-light.png",
-                dark: "/images/sorette/sitemap-dark.png",
+                light: "/images/mechmarket/sitemap-light.png",
+                dark: "/images/mechmarket/sitemap-dark.png",
               },
-              alt: "sorette sitemap",
+              alt: "mechmarket sitemap",
             },
             {
               src: {
-                light: "/images/sorette/userflow1-light.png",
-                dark: "/images/sorette/userflow1-dark.png",
+                light: "/images/mechmarket/userflow1-light.png",
+                dark: "/images/mechmarket/userflow1-dark.png",
               },
-              alt: "Uploading audio to sorette",
+              alt: "Purchasing a product",
             },
             {
               src: {
-                light: "/images/sorette/userflow2-light.png",
-                dark: "/images/sorette/userflow2-dark.png",
+                light: "/images/mechmarket/userflow2-light.png",
+                dark: "/images/mechmarket/userflow2-dark.png",
               },
               alt: "Using filtering options",
             },
             {
               src: {
-                light: "/images/sorette/userflow3-light.png",
-                dark: "/images/sorette/userflow3-dark.png",
+                light: "/images/mechmarket/userflow3-light.png",
+                dark: "/images/mechmarket/userflow3-dark.png",
               },
               alt: "Accepting a project collaboration invite",
             },
