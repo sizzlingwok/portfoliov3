@@ -58,13 +58,6 @@ export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
     setMounted(true);
   }, []);
 
-  // Set theme to system on initial load
-  useEffect(() => {
-    if (theme !== "system") {
-      setTheme("system");
-    }
-  }, []); // Empty dependency array means this runs once on mount
-
   // Log theme changes
   useEffect(() => {
     console.log({

@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { getProjectNavigation } from "@/config/projects";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigationItems = (
@@ -54,42 +52,22 @@ const navigationItems = (
 
 export default function ScrollHeader() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(true); // Default to mobile to avoid hydration issues
-  const pathname = usePathname();
-  const { current } = getProjectNavigation(pathname);
 
   useEffect(() => {
-    // Check if we're on mobile
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    setIsMobile(!mediaQuery.matches);
-
-    // Update isMobile when screen size changes
-    const handleResize = (e: MediaQueryListEvent) => {
-      setIsMobile(!e.matches);
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
 
-    mediaQuery.addEventListener("change", handleResize);
-
-    // Only add scroll listener if not mobile
-    if (!isMobile) {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        setIsVisible(scrollPosition > 200);
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-        mediaQuery.removeEventListener("change", handleResize);
-      };
-    }
+    window.addEventListener("scroll", toggleVisibility);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleResize);
+      window.removeEventListener("scroll", toggleVisibility);
     };
-  }, [isMobile]);
-
-  if (isMobile || !current) return null;
+  }, []);
 
   return (
     <AnimatePresence>
