@@ -5,7 +5,7 @@ import VideoSection from "@/components/VideoSection";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import Image from "next/image";
-import ImageCarousel from "@/components/ImageCarousel";
+import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
 
 const marqueeImages = [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   description: project.description,
 };
 
-export default function SpotifyParty() {
+export default function Project() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
       <ProjectHeader
@@ -451,9 +451,10 @@ export default function SpotifyParty() {
           title="Information Architecture"
           description="Here I have created a sitemap for Spotify Party as well as provided 3 user flows to showcase the core functionality of the features. The flows include: inviting friends to a group session, accepting a group session invitation, and finding previous group session playlists."
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
                 light: "/images/spotify/sitemap-light.png",
                 dark: "/images/spotify/sitemap-dark.png",
@@ -461,6 +462,7 @@ export default function SpotifyParty() {
               alt: "Spotify Party Sitemap",
             },
             {
+              type: "image",
               src: {
                 light: "/images/spotify/userflow1-light.png",
                 dark: "/images/spotify/userflow1-dark.png",
@@ -468,6 +470,7 @@ export default function SpotifyParty() {
               alt: "Inviting friends to a group session",
             },
             {
+              type: "image",
               src: {
                 light: "/images/spotify/userflow2-light.png",
                 dark: "/images/spotify/userflow2-dark.png",
@@ -475,6 +478,7 @@ export default function SpotifyParty() {
               alt: "Accepting a group session invitation",
             },
             {
+              type: "image",
               src: {
                 light: "/images/spotify/userflow3-light.png",
                 dark: "/images/spotify/userflow3-dark.png",

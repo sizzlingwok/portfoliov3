@@ -5,7 +5,7 @@ import VideoSection from "@/components/VideoSection";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import Image from "next/image";
-import ImageCarousel from "@/components/ImageCarousel";
+import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
 
 const marqueeImages = [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   description: project.description,
 };
 
-export default function sorette() {
+export default function Project() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
       <ProjectHeader
@@ -394,9 +394,10 @@ for music professionals, offering seamless collaboration
           title="Mid Fidelity Prototypes"
           description=""
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
                 light: "/images/sorette/midfi1.png",
                 dark: "/images/sorette/midfi1.png",
@@ -404,6 +405,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette homepage prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/midfi2.png",
                 dark: "/images/sorette/midfi2.png",
@@ -411,6 +413,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette library prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/midfi3.png",
                 dark: "/images/sorette/midfi3.png",
@@ -418,6 +421,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette projects prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/midfi4.png",
                 dark: "/images/sorette/midfi4.png",
@@ -575,9 +579,10 @@ for music professionals, offering seamless collaboration
           title="Information Architecture"
           description="Here I have created a sitemap for Spotify Party as well as provided 3 user flows to showcase the core functionality of the features. The flows include: inviting friends to a group session, accepting a group session invitation, and finding previous group session playlists."
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
                 light: "/images/sorette/sitemap-light.png",
                 dark: "/images/sorette/sitemap-dark.png",
@@ -585,6 +590,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette sitemap",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/userflow1-light.png",
                 dark: "/images/sorette/userflow1-dark.png",
@@ -592,6 +598,7 @@ for music professionals, offering seamless collaboration
               alt: "Uploading audio to sorette",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/userflow2-light.png",
                 dark: "/images/sorette/userflow2-dark.png",
@@ -599,6 +606,7 @@ for music professionals, offering seamless collaboration
               alt: "Using filtering options",
             },
             {
+              type: "image",
               src: {
                 light: "/images/sorette/userflow3-light.png",
                 dark: "/images/sorette/userflow3-dark.png",

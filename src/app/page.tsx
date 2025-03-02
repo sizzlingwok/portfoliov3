@@ -7,8 +7,8 @@ const projects = [
   {
     title: "Readeezy AI Reading Companion",
     description:
-      "Enhancing the group listening experience for an immersive music exploration",
-    imagePath: "/images/home/spotify.png",
+      "Interactive reading companion for supporting struggling readers effectively",
+    imagePath: "/images/home/readeezy.png",
     href: "/readeezy",
   },
   {
@@ -41,7 +41,7 @@ const projects = [
   },
 ];
 
-export default function Page() {
+export default function Home() {
   return (
     <main className="flex-col min-h-screen">
       <section className="landing px-8 pt-[12rem] md:pt-64 flex flex-col gap-4 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">

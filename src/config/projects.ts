@@ -10,11 +10,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "001",
-    name: "Readeezy AI Reading Companion",
+    name: "Readeezy Reading Companion",
     path: "/readeezy",
-    url: "https://www.figma.com/proto/...",
-    description: "AI-powered reading companion for enhanced comprehension",
-    buttonText: "View Prototype",
+    url: "https://www.figma.com/deck/zvRcKlPO0fsI3QhTDfJMCF/Readeezy-Companion-Presentation?node-id=55-46&viewport=36%2C-134%2C0.63&t=6yF5lda8AQK08xjp-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+    description:
+      "Interactive reading companion for supporting struggling readers effectively",
+    buttonText: "View Presentation",
   },
   {
     id: "002",

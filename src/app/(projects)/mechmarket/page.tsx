@@ -5,7 +5,7 @@ import VideoSection from "@/components/VideoSection";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import Image from "next/image";
-import ImageCarousel from "@/components/ImageCarousel";
+import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
 
 const marqueeImages = [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   description: project.description,
 };
 
-export default function sorette() {
+export default function Project() {
   return (
     <main className="flex-col min-h-screen overflow-x-hidden">
       <ProjectHeader
@@ -130,7 +130,7 @@ export default function sorette() {
           <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl justify-items-center">
             <CardInfo
               title="Redefining Reddit as a Marketplace"
-              description="Reddit’s focus on content browsing may limit its appeal for marketplace activities, highlighting the need for better integration of marketplace features"
+              description="Reddit's focus on content browsing may limit its appeal for marketplace activities, highlighting the need for better integration of marketplace features"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ export default function sorette() {
                   <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
                   <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
                   <path d="M2 7h20" />
-                  <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" />
+                  <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2 2 0 0 1-2-2V7" />
                 </svg>
               }
             />
@@ -386,9 +386,10 @@ export default function sorette() {
           title="Low Fidelity Prototypes"
           description=""
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/lofi1.png",
                 dark: "/images/mechmarket/lofi1.png",
@@ -396,6 +397,7 @@ export default function sorette() {
               alt: "mechmarket lofi prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/lofi2.png",
                 dark: "/images/mechmarket/lofi2.png",
@@ -403,6 +405,7 @@ export default function sorette() {
               alt: "mechmarket lofi prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/lofi3.png",
                 dark: "/images/mechmarket/lofi3.png",
@@ -410,6 +413,7 @@ export default function sorette() {
               alt: "mechmarket lofi prototype",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/lofi4.png",
                 dark: "/images/mechmarket/lofi4.png",
@@ -490,9 +494,10 @@ export default function sorette() {
           title="Information Architecture"
           description="Here I have created a sitemap for Spotify Party as well as provided 3 user flows to showcase the core functionality of the features. The flows include: inviting friends to a group session, accepting a group session invitation, and finding previous group session playlists."
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/sitemap-light.png",
                 dark: "/images/mechmarket/sitemap-dark.png",
@@ -500,6 +505,7 @@ export default function sorette() {
               alt: "mechmarket sitemap",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/userflow1-light.png",
                 dark: "/images/mechmarket/userflow1-dark.png",
@@ -507,6 +513,7 @@ export default function sorette() {
               alt: "Purchasing a product",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/userflow2-light.png",
                 dark: "/images/mechmarket/userflow2-dark.png",
@@ -514,6 +521,7 @@ export default function sorette() {
               alt: "Using filtering options",
             },
             {
+              type: "image",
               src: {
                 light: "/images/mechmarket/userflow3-light.png",
                 dark: "/images/mechmarket/userflow3-dark.png",
@@ -533,7 +541,7 @@ export default function sorette() {
         <SectionHeading
           id=""
           title="Things I would do differently"
-          description="Reflecting on the project, I realize that more thorough planning and refinement from the start would have provided a clearer project direction. By adopting a more strategic approach, I could have minimized the need for frequent adjustments during feature implementation. In future projects, I’ll prioritize these lessons to execute more efficiently and effectively"
+          description="Reflecting on the project, I realize that more thorough planning and refinement from the start would have provided a clearer project direction. By adopting a more strategic approach, I could have minimized the need for frequent adjustments during feature implementation. In future projects, I'll prioritize these lessons to execute more efficiently and effectively"
         />
       </section>
     </main>

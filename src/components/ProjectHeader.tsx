@@ -109,7 +109,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({
   return (
     <section className="landing px-8 pt-[12rem] md:pt-64 flex flex-col gap-40 select-none lg:px-24 transition-[padding] duration-300 ease-in-out">
       <motion.h1
-        className="project-name text-8xl font-medium dark:text-dark-text"
+        className="project-name text-8xl font-medium dark:text-dark-text break-words"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{

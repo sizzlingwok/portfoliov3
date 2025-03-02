@@ -3,7 +3,7 @@ import { projects } from "@/config/projects";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
-import ImageCarousel from "@/components/ImageCarousel";
+import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
 
 const marqueeImages = [
@@ -139,7 +139,7 @@ export default function Project() {
         />
         <SectionHeading
           title="Target Audience"
-          description="Our target audience includes families with hard-of-hearing children who face challenges in accessing language and communication support. This includes parents and guardians guiding their child’s education, as well as children who benefit from early intervention tools for language development and social integration"
+          description="Our target audience includes families with hard-of-hearing children who face challenges in accessing language and communication support. This includes parents and guardians guiding their child's education, as well as children who benefit from early intervention tools for language development and social integration"
         />
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
@@ -212,35 +212,39 @@ export default function Project() {
           title="Low Fidelity Prototypes"
           description=""
         />
-        <ImageCarousel
-          images={[
+        <Carousel
+          items={[
             {
+              type: "image",
               src: {
-                light: "/images/mechmarket/lofi1.png",
-                dark: "/images/mechmarket/lofi1.png",
+                light: "/images/dillo/lofi1.png",
+                dark: "/images/dillo/lofi1.png",
               },
-              alt: "mechmarket lofi prototype",
+              alt: "dillo lofi prototype",
             },
             {
+              type: "image",
               src: {
-                light: "/images/mechmarket/lofi2.png",
-                dark: "/images/mechmarket/lofi2.png",
+                light: "/images/dillo/lofi2.png",
+                dark: "/images/dillo/lofi2.png",
               },
-              alt: "mechmarket lofi prototype",
+              alt: "dillo lofi prototype",
             },
             {
+              type: "image",
               src: {
-                light: "/images/mechmarket/lofi3.png",
-                dark: "/images/mechmarket/lofi3.png",
+                light: "/images/dillo/lofi3.png",
+                dark: "/images/dillo/lofi3.png",
               },
-              alt: "mechmarket lofi prototype",
+              alt: "dillo lofi prototype",
             },
             {
+              type: "image",
               src: {
-                light: "/images/mechmarket/lofi4.png",
-                dark: "/images/mechmarket/lofi4.png",
+                light: "/images/dillo/lofi4.png",
+                dark: "/images/dillo/lofi4.png",
               },
-              alt: "mechmarket lofi prototype",
+              alt: "dillo lofi prototype",
             },
           ]}
         />
