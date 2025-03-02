@@ -5,7 +5,7 @@ import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
-import PainpointTable from "@/components/PainpointTable";
+import Image from "next/image";
 
 const marqueeImages = [
   {
@@ -43,7 +43,7 @@ export default function Project() {
       <ProjectHeader
         projectName="Readeezy Reading Companion"
         projectId="001"
-        role="UX Design, Prototyping"
+        role="UX Design, User Research, Prototyping, Usability Testing"
         tools="Figma, Notion, UserTesting"
         timeline="3 months - (November - Febuary 2025)"
         description="This project with Readeezy aimed to provide a reading companion to support struggling readers below the standard reading level. The companion engages students by answering questions, discussing storylines, and providing real-time interactions to enhance their reading experience. The tool is designed to offer personalized learning support, helping students improve their reading skills in an interactive and engaging way"
@@ -59,6 +59,13 @@ export default function Project() {
       <section className="project-section">
         <SectionHeading
           id="003"
+          title="Problem Statement"
+          description="How might we create an encouraging digital reading environment that fosters engagement, provides opportunities to correct mistakes, and reinforces positive progress?"
+        />
+      </section>
+      <section className="project-section">
+        <SectionHeading
+          id="004"
           title="Final Solution"
           description="Our team developed an intuitive AI Companion for Readeezy's digital library platform that integrates seamlessly with the user interface. It offers multi-modal interaction through voice commands and touch/click inputs, ensuring accessibility for all users. The companion includes vocabulary support, providing age-appropriate definitions and examples, as well as sentence comprehension tools with highlighting functionality and clear, concise explanations. As a patient tutor, the companion is always available to help users overcome difficulties, removing the embarrassment often associated with asking for help and encouraging greater reading independence"
         />
@@ -127,7 +134,7 @@ export default function Project() {
       </section>
       <section className="project-section">
         <SectionHeading
-          id="004"
+          id="005"
           title="The Process"
           description="Our design process followed three main phases"
         />
@@ -199,16 +206,16 @@ export default function Project() {
       </section>
       <section className="project-section">
         <SectionHeading
-          id="005"
+          id="006"
           title="Target Audience"
           description="Our target audience consists of special education teachers with experience supporting struggling readers aged 11+ who have learning and cognitive disabilities, as well as English as a Second Language (ESL) needs. We also considered parents who homeschool children facing similar challenges. The research focused primarily on gathering insights from these educators to inform our design solutions"
         />
       </section>
       <section className="project-section">
         <SectionHeading
-          id="006"
+          id="007"
           title="Research and Ideation"
-          description="Over a 3-week research period, we conducted moderated interviews via Google Meet with 7 special education teachers. The insights gathered were then synthesized through affinity mapping to identify key patterns and inform our design solutions"
+          description="Over a 3 week research period, we conducted moderated interviews via Google Meet with 7 special education teachers. The insights gathered were then synthesized through affinity mapping to identify key patterns and inform our design solutions"
         />
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
@@ -351,152 +358,119 @@ export default function Project() {
             />
           </div>
         </div>
-      </section>
-      <section className="project-section">
         <SectionHeading
-          id="003"
-          title="Problem Statement"
-          description="Many adolescents, teens, and young adults read below their grade level, which can lead to frustration, disengagement, and educational challenges. While Readeezy provides accessible reading materials, users often need additional support with vocabulary, comprehension, and engagement. The challenge was to design a supplementary AI companion buddy that would provide real-time assistance in a non-judgmental way, helping struggling readers overcome barriers and build confidence"
+          title="Proposed Solutions"
+          description="We aimed to create a more positive learning environment by using an informal, supportive, and uplifting tone. To enhance comprehension, we included clear vocabulary support with accessible definitions. We also introduced multiple input options, allowing students to engage with the platform without needing to rely on voice alone, making it more accessible for everyone"
         />
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
-            <CardInfo
-              title="Engagement Challenges"
-              description="ASL learning can feel overwhelming or uninteresting without interactive methods that make the experience engaging for both children and parents"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#ffc375"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="size-6"
-                >
-                  <path d="M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7" />
-                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
-                </svg>
-              }
-            />
-            <CardInfo
-              title="Family Involvement"
-              description="Parents play a key role in ASL learning, but many lack the tools and knowledge needed to confidently teach their hard of hearing children"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#ffc375"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="size-6"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              }
-            />
-            <CardInfo
-              title="Lack of Resources"
-              description="Many ASL resources overlook accessibility, making it difficult for families to find materials that effectively support their learning needs"
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#ffc375"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="size-6"
-                >
-                  <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-                  <path d="M6 12h2" />
-                  <path d="M6 8h2" />
-                </svg>
-              }
-            />
-          </div>
+        <SectionHeading
+          title="Feature Mapping & Ideation"
+          description="Our team generated 50 ideas in total and prioritized them based on impact and feasibility"
+        />
+        <div className="relative">
+          <Image
+            src="/images/readeezy/ideation.png"
+            alt="Readeezy ideation"
+            className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
+          />
+          <Image
+            src="/images/readeezy/ideation.png"
+            alt="Readeezy ideation"
+            className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
+          />
         </div>
       </section>
-
       <section className="project-section max-w-full">
         <SectionHeading
-          id="004"
-          title="User Research"
-          description="Navigating Challenges in Hearing Family Dynamics"
+          id="008"
+          title="Prototyping and Testing"
+          description="To refine our designs, we built prototypes and conducted usability testing with six teachers through our network and UserTesting.com. By analyzing feedback and identifying common themes, we uncovered unmet needs in our early prototypes, guiding key design improvements. Participants tested two flows: one for sentence assistance and another for vocabulary support. These tests helped us evaluate how effectively the AI companion provided accessible help and identify areas for improvement"
         />
+        <div className="relative">
+          <Image
+            src="/images/readeezy/usertesting-light.png"
+            alt="User Testing"
+            className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
+          />
+          <Image
+            src="/images/readeezy/usertesting-dark.png"
+            alt="User Testing"
+            className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
+          />
+        </div>
         <SectionHeading
-          title="Secondary Research"
-          description="Due to time limitations, primary research was not conducted. Instead, we analyzed existing data, uncovering a critical gap: Over 90% of deaf children are born to hearing families with little knowledge of deafness. Limited access to early hearing screenings leaves many families without clear guidance on essential language and communication support"
-        />
-        <SectionHeading
-          title="Target Audience"
-          description="Our target audience includes families with hard-of-hearing children who face challenges in accessing language and communication support. This includes parents and guardians guiding their child's education, as well as children who benefit from early intervention tools for language development and social integration"
+          title="Key Feedback and Iterations"
+          description="The results revealed strong engagement with the vocabulary and sentence flows, while also identifying areas for improvement. Iterations focused on enhancing clarity and optimizing the flow for smoother interactions. Below are some key insights gathered from user feedback"
         />
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] justify-center transition-[grid-template-columns] duration-300 ease-in-out">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-7xl 3xl:max-w-[90rem] place-items-center transition-[grid-template-columns] duration-300 ease-in-out">
             <CardInfo
-              title="Engagement Challenges"
-              description="ASL learning can feel overwhelming or uninteresting without interactive methods that make the experience engaging for both children and parents"
+              title="Users couldn't identify when they were prompted to speak"
+              description="A clear animation with a delayed pop-up was added to make prompts more noticeable and intuitive"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ffc375"
                   strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  stroke="#1DB954"
                   className="size-6"
                 >
-                  <path d="M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7" />
-                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
                 </svg>
               }
             />
             <CardInfo
-              title="Family Involvement"
-              description="Parents play a key role in ASL learning, but many lack the tools and knowledge needed to confidently teach their hard of hearing children"
+              title="Conversation flow felt redundant and unnecessary"
+              description="Redundant screens were removed, and steps were consolidated to simplify the user journey"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ffc375"
                   strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  stroke="#1DB954"
                   className="size-6"
                 >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  <path d="M13 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                  <path d="m22 3-5 5" />
+                  <path d="m17 3 5 5" />
                 </svg>
               }
             />
             <CardInfo
-              title="Lack of Resources"
-              description="Many ASL resources overlook accessibility, making it difficult for families to find materials that effectively support their learning needs"
+              title="Exit prompt created confusion with user navigation"
+              description="The exit prompt was replaced with a natural timeout using the existing X button"
               icon={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ffc375"
                   strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  stroke="#1DB954"
                   className="size-6"
                 >
-                  <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-                  <path d="M6 12h2" />
-                  <path d="M6 8h2" />
+                  <path d="M2 21a8 8 0 0 1 11.873-7" />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="m17 17 5 5" />
+                  <path d="m22 17-5 5" />
                 </svg>
               }
             />
@@ -504,50 +478,53 @@ export default function Project() {
         </div>
       </section>
       <section className="project-section">
+        <SectionHeading id="009" title="Demo Video" description="" />
+        <div className="flex justify-center">
+          <div className="relative w-full">
+            <video
+              controls
+              preload="none"
+              playsInline
+              aria-label="Readeezy demo video"
+              className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
+            >
+              <source src="/videos/readeezy/demo.mp4" type="video/mp4" />
+            </video>
+            <video
+              controls
+              preload="none"
+              playsInline
+              aria-label="Readeezy demo video"
+              className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
+            >
+              <source src="/videos/readeezy/demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+      <section className="project-section max-w-full">
         <SectionHeading
-          id="005"
-          title="Low Fidelity Prototypes"
-          description=""
+          id="010"
+          title="Testimonials"
+          description="A word from those involved in the project"
         />
-        <Carousel
-          items={[
-            {
-              type: "image",
-              src: {
-                light: "/images/dillo/lofi1.png",
-                dark: "/images/dillo/lofi1.png",
-              },
-              alt: "dillo lofi prototype",
-            },
-            {
-              type: "image",
-              src: {
-                light: "/images/dillo/lofi2.png",
-                dark: "/images/dillo/lofi2.png",
-              },
-              alt: "dillo lofi prototype",
-            },
-            {
-              type: "image",
-              src: {
-                light: "/images/dillo/lofi3.png",
-                dark: "/images/dillo/lofi3.png",
-              },
-              alt: "dillo lofi prototype",
-            },
-            {
-              type: "image",
-              src: {
-                light: "/images/dillo/lofi4.png",
-                dark: "/images/dillo/lofi4.png",
-              },
-              alt: "dillo lofi prototype",
-            },
-          ]}
-        />
+        <div className="flex justify-center">
+          <div className="inline-grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl justify-items-center">
+            <CardInfo
+              title="Maria Cleary, Founder of Readeezy"
+              description="&quot;You have no idea how impressive it is to do this. What you've put together gives us such a good foundation to move forward to get funding, to be partners with other people who are interested in this space, it's so much more articulated with your work.&quot;"
+              image="/images/spotify/michelle.webp"
+            />
+            <CardInfo
+              title="Lindsay, K-8 Special Education Teacher"
+              description='"This is a great feature, it would be very helpful to the students I work with! I thought the (companion&apos;s) language was understandable & friendly"'
+              image="/images/spotify/edward.webp"
+            />
+          </div>
+        </div>
       </section>
       <section className="project-section pb-32">
-        <SectionHeading id="006" title="Wrapping up" description="" />
+        <SectionHeading id="011" title="Wrapping up" description="" />
         <SectionHeading
           id=""
           title="Project Takeaways"
@@ -557,12 +534,6 @@ export default function Project() {
           id=""
           title="Learning Outcomes"
           description="This hackathon refined my design thinking skills, emphasizing user-centered design and rapid prototyping. Managing tasks efficiently under tight deadlines improved my project management and prioritization abilities. Working closely with my team enhanced my communication skills, adaptability, and ability to align on a shared vision. These experiences have strengthened my confidence in technical development, collaborative design, and problem-solving in fast-paced environments"
-        />
-      </section>
-      <section className="project-section">
-        <SectionHeading
-          title="Key Pain Points & Solutions"
-          description="Through our research, we identified several key challenges and developed targeted solutions"
         />
       </section>
     </main>
