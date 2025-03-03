@@ -3,13 +3,11 @@
 import Marquee from "react-fast-marquee";
 import MarqueeImage from "./MarqueeImage";
 
-interface MarqueeImage {
-  src: string;
-  alt: string;
-}
-
 interface MarqueeSectionProps {
-  images: MarqueeImage[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
   speed?: number;
   direction?: "left" | "right";
 }
@@ -24,10 +22,9 @@ export default function MarqueeSection({
       <Marquee speed={speed} direction={direction}>
         {images.map((image, index) => (
           <MarqueeImage
-            key={image.src}
+            key={`${image.src}-${index}`}
             src={image.src}
             alt={image.alt}
-            index={index}
           />
         ))}
       </Marquee>
