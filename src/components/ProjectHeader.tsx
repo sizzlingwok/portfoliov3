@@ -27,7 +27,6 @@ const SplitText = ({
 
     const element = containerRef.current;
     const lineHeight = parseInt(window.getComputedStyle(element).lineHeight);
-    const height = element.clientHeight;
 
     const tempElement = document.createElement("div");
     tempElement.style.cssText = window.getComputedStyle(element).cssText;
