@@ -4,7 +4,6 @@ import SectionHeading from "@/components/SectionHeading";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import MarqueeSection from "@/components/MarqueeSection";
-import Image from "next/image";
 import BlurMedia from "@/components/BlurMedia";
 
 const marqueeImages = [
