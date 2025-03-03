@@ -397,6 +397,7 @@ for music professionals, offering seamless collaboration
         <Carousel
           items={[
             {
+              id: "sorette-midfi-1",
               type: "image",
               src: {
                 light: "/images/sorette/midfi1.png",
@@ -405,6 +406,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette homepage prototype",
             },
             {
+              id: "sorette-midfi-2",
               type: "image",
               src: {
                 light: "/images/sorette/midfi2.png",
@@ -413,6 +415,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette library prototype",
             },
             {
+              id: "sorette-midfi-3",
               type: "image",
               src: {
                 light: "/images/sorette/midfi3.png",
@@ -421,6 +424,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette projects prototype",
             },
             {
+              id: "sorette-midfi-4",
               type: "image",
               src: {
                 light: "/images/sorette/midfi4.png",
@@ -582,6 +586,7 @@ for music professionals, offering seamless collaboration
         <Carousel
           items={[
             {
+              id: "sorette-sitemap",
               type: "image",
               src: {
                 light: "/images/sorette/sitemap-light.png",
@@ -590,6 +595,7 @@ for music professionals, offering seamless collaboration
               alt: "sorette sitemap",
             },
             {
+              id: "sorette-userflow-1",
               type: "image",
               src: {
                 light: "/images/sorette/userflow1-light.png",
@@ -598,6 +604,7 @@ for music professionals, offering seamless collaboration
               alt: "Uploading audio to sorette",
             },
             {
+              id: "sorette-userflow-2",
               type: "image",
               src: {
                 light: "/images/sorette/userflow2-light.png",
@@ -606,6 +613,7 @@ for music professionals, offering seamless collaboration
               alt: "Using filtering options",
             },
             {
+              id: "sorette-userflow-3",
               type: "image",
               src: {
                 light: "/images/sorette/userflow3-light.png",

@@ -9,18 +9,6 @@ const ProjectNavbar = () => {
   const pathname = usePathname();
   const { current, previous, next } = getProjectNavigation(pathname);
 
-  const tooltipVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.2,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
-
   return (
     <motion.div
       className="fixed bottom-2 left-0 right-0 mx-auto w-fit z-50"

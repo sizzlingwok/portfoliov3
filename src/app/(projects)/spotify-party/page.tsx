@@ -454,6 +454,7 @@ export default function Project() {
         <Carousel
           items={[
             {
+              id: "spotify-sitemap",
               type: "image",
               src: {
                 light: "/images/spotify/sitemap-light.png",
@@ -462,6 +463,7 @@ export default function Project() {
               alt: "Spotify Party Sitemap",
             },
             {
+              id: "spotify-userflow-1",
               type: "image",
               src: {
                 light: "/images/spotify/userflow1-light.png",
@@ -470,6 +472,7 @@ export default function Project() {
               alt: "Inviting friends to a group session",
             },
             {
+              id: "spotify-userflow-2",
               type: "image",
               src: {
                 light: "/images/spotify/userflow2-light.png",
@@ -478,6 +481,7 @@ export default function Project() {
               alt: "Accepting a group session invitation",
             },
             {
+              id: "spotify-userflow-3",
               type: "image",
               src: {
                 light: "/images/spotify/userflow3-light.png",

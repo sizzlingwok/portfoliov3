@@ -47,14 +47,7 @@ export default function Project() {
         role="UX Design, User Research, Visual Design, Prototyping"
         tools="Figma, Google Forms, Optimal Workshop, After Effects"
         timeline="10 weeks (Mar - May 2023)"
-        description="mechmarket is a dedicated marketplace app where users can buy
-                and sell keyboard related products. mechmarket currently thrives
-                as a subreddit with close to 300,000 members. Recognizing the
-                potential for improvement, I believe the development of a
-                dedicated mobile app would not only streamline the buying and
-                selling experience, but also unlock a plethora of new features
-                that were previously hindred by the traditional scope of
-                Reddit's functionality."
+        description="mechmarket is a dedicated marketplace app where users can buy and sell keyboard related products. mechmarket currently thrives as a subreddit with close to 300,000 members. Recognizing the potential for improvement, I believe the development of a dedicated mobile app would not only streamline the buying and selling experience, but also unlock a plethora of new features that were previously hindered by the traditional scope of Reddit's functionality."
       />
       <MarqueeSection images={marqueeImages} />
       <section className="project-section">
@@ -389,6 +382,7 @@ export default function Project() {
         <Carousel
           items={[
             {
+              id: "lofi-1",
               type: "image",
               src: {
                 light: "/images/mechmarket/lofi1.png",
@@ -397,6 +391,7 @@ export default function Project() {
               alt: "mechmarket lofi prototype",
             },
             {
+              id: "lofi-2",
               type: "image",
               src: {
                 light: "/images/mechmarket/lofi2.png",
@@ -405,6 +400,7 @@ export default function Project() {
               alt: "mechmarket lofi prototype",
             },
             {
+              id: "lofi-3",
               type: "image",
               src: {
                 light: "/images/mechmarket/lofi3.png",
@@ -413,6 +409,7 @@ export default function Project() {
               alt: "mechmarket lofi prototype",
             },
             {
+              id: "lofi-4",
               type: "image",
               src: {
                 light: "/images/mechmarket/lofi4.png",
@@ -497,6 +494,7 @@ export default function Project() {
         <Carousel
           items={[
             {
+              id: "mechmarket-sitemap",
               type: "image",
               src: {
                 light: "/images/mechmarket/sitemap-light.png",
@@ -505,6 +503,7 @@ export default function Project() {
               alt: "mechmarket sitemap",
             },
             {
+              id: "mechmarket-userflow-1",
               type: "image",
               src: {
                 light: "/images/mechmarket/userflow1-light.png",
@@ -513,6 +512,7 @@ export default function Project() {
               alt: "Purchasing a product",
             },
             {
+              id: "mechmarket-userflow-2",
               type: "image",
               src: {
                 light: "/images/mechmarket/userflow2-light.png",
@@ -521,6 +521,7 @@ export default function Project() {
               alt: "Using filtering options",
             },
             {
+              id: "mechmarket-userflow-3",
               type: "image",
               src: {
                 light: "/images/mechmarket/userflow3-light.png",

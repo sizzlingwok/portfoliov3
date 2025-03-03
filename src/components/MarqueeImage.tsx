@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 interface MarqueeImageProps {
   src: string;
   alt: string;
-  index?: number;
 }
 
-const MarqueeImage: React.FC<MarqueeImageProps> = ({ src, alt, index = 0 }) => {
+const MarqueeImage: React.FC<MarqueeImageProps> = ({ src, alt }) => {
   return (
     <motion.div
       className="w-[80vw] md:w-[60vw] lg:w-[35vw] rounded-md overflow-hidden shrink-0 relative flex items-center justify-center mr-6"

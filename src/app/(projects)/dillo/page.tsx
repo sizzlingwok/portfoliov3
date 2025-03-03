@@ -215,6 +215,7 @@ export default function Project() {
         <Carousel
           items={[
             {
+              id: "dillo-lofi-1",
               type: "image",
               src: {
                 light: "/images/dillo/lofi1.png",
@@ -223,6 +224,7 @@ export default function Project() {
               alt: "dillo lofi prototype",
             },
             {
+              id: "dillo-lofi-2",
               type: "image",
               src: {
                 light: "/images/dillo/lofi2.png",
@@ -231,6 +233,7 @@ export default function Project() {
               alt: "dillo lofi prototype",
             },
             {
+              id: "dillo-lofi-3",
               type: "image",
               src: {
                 light: "/images/dillo/lofi3.png",
@@ -239,6 +242,7 @@ export default function Project() {
               alt: "dillo lofi prototype",
             },
             {
+              id: "dillo-lofi-4",
               type: "image",
               src: {
                 light: "/images/dillo/lofi4.png",

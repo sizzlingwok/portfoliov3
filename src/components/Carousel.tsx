@@ -4,13 +4,16 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 interface CarouselItem {
-  type: "image" | "video";
-  src?: {
-    light: string;
-    dark: string;
-  };
+  id: string;
+  type: "video" | "image";
   videoId?: string;
-  alt: string;
+  src?:
+    | string
+    | {
+        light: string;
+        dark: string;
+      };
+  alt?: string;
 }
 
 interface CarouselProps {
@@ -56,41 +59,58 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     setCurrentIndex(index);
   };
 
-  const renderCarouselItem = (item: CarouselItem, index: number) => {
+  const renderCarouselItem = (item: CarouselItem) => {
     if (item.type === "video" && item.videoId) {
       return (
-        <div className="relative w-full aspect-video">
-          <iframe
-            src={`https://www.youtube.com/embed/${item.videoId}`}
-            title={item.alt}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="absolute inset-0 w-full h-full rounded-md"
+        <iframe
+          src={`https://www.youtube.com/embed/${item.videoId}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="aspect-video w-full"
+        />
+      );
+    }
+    if (item.type === "image" && item.src) {
+      if (typeof item.src === "string") {
+        return (
+          <motion.img
+            src={item.src}
+            alt={item.alt || ""}
+            className="w-full h-auto object-contain select-none"
+            draggable={false}
+            initial={{ filter: "blur(25px)", opacity: 0 }}
+            animate={{ filter: "blur(0px)", opacity: 1 }}
+            transition={{
+              duration: 1.6,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          />
+        );
+      }
+
+      return (
+        <div className="relative">
+          <Image
+            src={item.src.light}
+            alt={item.alt || ""}
+            className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
+          />
+          <Image
+            src={item.src.dark}
+            alt={item.alt || ""}
+            className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
+            draggable={false}
+            width={1200}
+            height={675}
           />
         </div>
       );
     }
-
-    return item.src ? (
-      <div className="relative">
-        <Image
-          src={item.src.light}
-          alt={item.alt}
-          className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
-          draggable={false}
-          width={1200}
-          height={675}
-        />
-        <Image
-          src={item.src.dark}
-          alt={item.alt}
-          className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
-          draggable={false}
-          width={1200}
-          height={675}
-        />
-      </div>
-    ) : null;
+    return null;
   };
 
   return (
@@ -105,26 +125,27 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       className="relative w-screen left-[50%] right-[50%] -mx-[50vw] max-w-none overflow-hidden"
     >
       <div className="relative">
-        <ul
+        <motion.ul
           ref={scrollContainerRef}
-          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:gap-[1.5rem]"
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:gap-[5vw]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1.6,
+            ease: [0.16, 1, 0.3, 1],
           }}
         >
-          {items.map((item, index) => (
+          {items.map((item) => (
             <li
-              key={index}
+              key={item.id}
               className="relative w-screen md:w-[65vw] shrink-0 snap-center md:first:ml-[17.5vw] md:last:mr-[17.5vw] flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-sand dark:focus-visible:ring-dark-sand px-8 md:px-0"
             >
               <div className="relative w-full rounded-md overflow-hidden">
-                {renderCarouselItem(item, index)}
+                {renderCarouselItem(item)}
               </div>
             </li>
           ))}
-        </ul>
+        </motion.ul>
 
         <div className="hidden md:flex justify-center gap-4 mt-6">
           <button
