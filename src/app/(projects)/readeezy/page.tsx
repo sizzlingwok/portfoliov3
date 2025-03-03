@@ -3,9 +3,9 @@ import { projects } from "@/config/projects";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
-import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
 import Image from "next/image";
+import BlurMedia from "@/components/BlurMedia";
 
 const marqueeImages = [
   {
@@ -366,24 +366,12 @@ export default function Project() {
           title="Feature Mapping & Ideation"
           description="Our team generated 50 ideas in total and prioritized them based on impact and feasibility"
         />
-        <div className="relative">
-          <Image
-            src="/images/readeezy/ideation.png"
-            alt="Readeezy ideation"
-            className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
-            draggable={false}
-            width={1200}
-            height={675}
-          />
-          <Image
-            src="/images/readeezy/ideation.png"
-            alt="Readeezy ideation"
-            className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
-            draggable={false}
-            width={1200}
-            height={675}
-          />
-        </div>
+        <BlurMedia
+          src="/images/readeezy/ideation.png"
+          alt="Readeezy ideation"
+          width={1200}
+          height={675}
+        />
       </section>
       <section className="project-section max-w-full">
         <SectionHeading
@@ -391,24 +379,15 @@ export default function Project() {
           title="Prototyping and Testing"
           description="To refine our designs, we built prototypes and conducted usability testing with six teachers through our network and UserTesting.com. By analyzing feedback and identifying common themes, we uncovered unmet needs in our early prototypes, guiding key design improvements. Participants tested two flows: one for sentence assistance and another for vocabulary support. These tests helped us evaluate how effectively the AI companion provided accessible help and identify areas for improvement"
         />
-        <div className="relative">
-          <Image
-            src="/images/readeezy/usertesting-light.png"
-            alt="User Testing"
-            className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
-            draggable={false}
-            width={1200}
-            height={675}
-          />
-          <Image
-            src="/images/readeezy/usertesting-dark.png"
-            alt="User Testing"
-            className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
-            draggable={false}
-            width={1200}
-            height={675}
-          />
-        </div>
+        <BlurMedia
+          src={{
+            light: "/images/readeezy/usertesting-light.png",
+            dark: "/images/readeezy/usertesting-dark.png",
+          }}
+          alt="User Testing"
+          width={1200}
+          height={675}
+        />
         <SectionHeading
           title="Key Feedback and Iterations"
           description="The results revealed strong engagement with the vocabulary and sentence flows, while also identifying areas for improvement. Iterations focused on enhancing clarity and optimizing the flow for smoother interactions. Below are some key insights gathered from user feedback"
@@ -424,14 +403,12 @@ export default function Project() {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#1DB954"
+                  stroke="#4DA49E"
                   className="size-6"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                  />
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" x2="12" y1="19" y2="22" />
                 </svg>
               }
             />
@@ -444,14 +421,12 @@ export default function Project() {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#1DB954"
+                  stroke="#4DA49E"
                   className="size-6"
                 >
-                  <path d="M13 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3" />
-                  <path d="M8 21h8" />
-                  <path d="M12 17v4" />
-                  <path d="m22 3-5 5" />
-                  <path d="m17 3 5 5" />
+                  <rect width="8" height="8" x="3" y="3" rx="2" />
+                  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+                  <rect width="8" height="8" x="13" y="13" rx="2" />
                 </svg>
               }
             />
@@ -464,13 +439,12 @@ export default function Project() {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#1DB954"
+                  stroke="#4DA49E"
                   className="size-6"
                 >
-                  <path d="M2 21a8 8 0 0 1 11.873-7" />
-                  <circle cx="10" cy="8" r="5" />
-                  <path d="m17 17 5 5" />
-                  <path d="m22 17-5 5" />
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  <path d="m10 15-3-3 3-3" />
+                  <path d="M7 12h7a2 2 0 0 1 2 2v1" />
                 </svg>
               }
             />
@@ -479,28 +453,11 @@ export default function Project() {
       </section>
       <section className="project-section">
         <SectionHeading id="009" title="Demo Video" description="" />
-        <div className="flex justify-center">
-          <div className="relative w-full">
-            <video
-              controls
-              preload="none"
-              playsInline
-              aria-label="Readeezy demo video"
-              className="w-full h-auto object-contain select-none dark:opacity-0 transition-opacity rounded-md"
-            >
-              <source src="/videos/readeezy/demo.mp4" type="video/mp4" />
-            </video>
-            <video
-              controls
-              preload="none"
-              playsInline
-              aria-label="Readeezy demo video"
-              className="w-full h-auto object-contain select-none absolute inset-0 opacity-0 dark:opacity-100 transition-opacity rounded-md"
-            >
-              <source src="/videos/readeezy/demo.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
+        <BlurMedia
+          type="video"
+          src="/videos/readeezy/demo.mp4"
+          alt="Readeezy demo video"
+        />
       </section>
       <section className="project-section max-w-full">
         <SectionHeading
@@ -513,12 +470,36 @@ export default function Project() {
             <CardInfo
               title="Maria Cleary, Founder of Readeezy"
               description="&quot;You have no idea how impressive it is to do this. What you've put together gives us such a good foundation to move forward to get funding, to be partners with other people who are interested in this space, it's so much more articulated with your work.&quot;"
-              image="/images/spotify/michelle.webp"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#4DA49E"
+                  className="size-6"
+                >
+                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                </svg>
+              }
             />
             <CardInfo
               title="Lindsay, K-8 Special Education Teacher"
               description='"This is a great feature, it would be very helpful to the students I work with! I thought the (companion&apos;s) language was understandable & friendly"'
-              image="/images/spotify/edward.webp"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="#4DA49E"
+                  className="size-6"
+                >
+                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                </svg>
+              }
             />
           </div>
         </div>
@@ -528,12 +509,12 @@ export default function Project() {
         <SectionHeading
           id=""
           title="Project Takeaways"
-          description="Participating in this hackathon was both rewarding and challenging, especially within a 24-hour time constraint. Collaborating on Dillo pushed me to think critically and adapt quickly. Seeing the project evolve and exploring innovative ideas from other teams was inspiring. This experience reinforced the importance of rapid problem-solving and strengthened my ability to design under pressure"
+          description="Working on the Readeezy AI Companion reinforced the importance of designing for users with specific educational needs. The project focused on creating a supportive, adaptable reading experience by simplifying user flows, offering multiple interaction pathways, and ensuring the design effectively met the needs of struggling readers. In the end, we delivered an AI companion that makes reading more accessible, engaging, and empowering"
         />
         <SectionHeading
           id=""
           title="Learning Outcomes"
-          description="This hackathon refined my design thinking skills, emphasizing user-centered design and rapid prototyping. Managing tasks efficiently under tight deadlines improved my project management and prioritization abilities. Working closely with my team enhanced my communication skills, adaptability, and ability to align on a shared vision. These experiences have strengthened my confidence in technical development, collaborative design, and problem-solving in fast-paced environments"
+          description="This project was a hands-on experience collaborating with managers, designers, and a client toward a shared goal and deadline. It provided insights into adapting designs within real-world constraints, managing timelines while iterating, and communicating effectively across disciplines. Beyond the technical work, it was a valuable lesson in teamwork, project management, and designing for inclusivity"
         />
       </section>
     </main>

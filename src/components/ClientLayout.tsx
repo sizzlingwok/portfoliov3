@@ -8,7 +8,12 @@ export default function ClientLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider
+      attribute="class" // For Tailwind dark mode
+      defaultTheme="system"
+      enableSystem={true}
+      disableTransitionOnChange={false}
+    >
       {children}
     </ThemeProvider>
   );
