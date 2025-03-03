@@ -1,11 +1,8 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
-function NotFoundContent() {
-  const searchParams = useSearchParams();
-
+function NotFoundPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-2">
       <h1 className="text-4xl font-medium">404</h1>
@@ -19,7 +16,7 @@ function NotFoundContent() {
 export default function NotFound() {
   return (
     <Suspense fallback={null}>
-      <NotFoundContent />
+      <NotFoundPage />
     </Suspense>
   );
 }
