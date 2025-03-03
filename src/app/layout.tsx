@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import localFont from "next/font/local";
 import ScrollHeader from "@/components/ScrollHeader";
 import ClientLayout from "@/components/ClientLayout";
+import { Suspense } from "react";
 
 const SFPro = localFont({
   src: [
@@ -59,12 +60,14 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ClientLayout>
-          <div className="layout min-h-screen flex flex-col">
-            <Header />
-            <ScrollHeader />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <Suspense fallback={null}>
+            <div className="layout min-h-screen flex flex-col">
+              <Header />
+              <ScrollHeader />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </Suspense>
         </ClientLayout>
       </body>
     </html>
