@@ -50,10 +50,9 @@ export default function RootLayout({
     <html lang="en" className={SFPro.variable} suppressHydrationWarning>
       <head>
         <Script
+          defer
           src="https://cloud.umami.is/script.js"
           data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
-          strategy="afterInteractive"
-          async
         />
       </head>
       <body
