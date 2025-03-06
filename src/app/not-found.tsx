@@ -1,20 +1,12 @@
-import { Suspense } from "react";
-
-function NotFoundPage() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-2">
-      <h1 className="text-4xl font-medium">404</h1>
-      <p className="text-lightgray dark:text-dark-lightgray">
-        The page you&apos;re looking for doesn&apos;t exist.
-      </p>
-    </main>
-  );
-}
-
 export default function NotFound() {
   return (
-    <Suspense fallback={null}>
-      <NotFoundPage />
-    </Suspense>
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="text-center select-none flex flex-col gap-2">
+        <h1 className="text-8xl font-medium">404</h1>
+        <p className="text-xl text-lightgray dark:text-dark-lightgray">
+          Page not found
+        </p>
+      </div>
+    </div>
   );
 }
