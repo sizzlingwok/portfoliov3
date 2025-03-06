@@ -50,7 +50,7 @@ export const projects: Project[] = [
     path: "/dillo",
     url: "https://www.figma.com/proto/uQHX7HBAYcTwQGlXcWy46o/CreateSC?page-id=135%3A12981&node-id=142-7541&t=Sg19RQVUbyvy8ta2-1",
     description:
-      "Integrating ASL into family bedtime reading to support deaf and hard of hearing children",
+      "Integrating ASL for bedtime reading to support deaf and hard of hearing children",
     buttonText: "View Slide Deck",
   },
 ] as const;
