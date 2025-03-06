@@ -48,6 +48,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={SFPro.variable} suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
+          strategy="afterInteractive"
+          async
+        />
+      </head>
       <body
         className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text"
         suppressHydrationWarning
@@ -63,10 +71,6 @@ export default function RootLayout({
           </Suspense>
         </ClientLayout>
       </body>
-      <Script
-        src="https://cloud.umami.is/script.js"
-        data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
-      />
     </html>
   );
 }
