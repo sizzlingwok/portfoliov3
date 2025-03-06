@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: "https://andyduong.work",
   generateRobotsTxt: true,
-  generateIndexSitemap: false,
+  generateIndexSitemap: true,
   exclude: ["/404"],
   robotsTxtOptions: {
     policies: [
