@@ -6,7 +6,7 @@ import ScrollHeader from "@/components/ScrollHeader";
 import ClientLayout from "@/components/ClientLayout";
 import { Suspense } from "react";
 import { defaultMetadata } from "@/config/metadata";
-import Script from "next/script";
+import Analytics from "@/components/Analytics";
 
 const SFPro = localFont({
   src: [
@@ -53,10 +53,7 @@ export default function RootLayout({
         className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text"
         suppressHydrationWarning
       >
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
-        />
+        <Analytics />
         <ClientLayout>
           <Suspense fallback={null}>
             <div className="layout min-h-screen flex flex-col">
