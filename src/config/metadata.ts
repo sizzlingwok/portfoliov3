@@ -64,7 +64,7 @@ export const defaultMetadata: Metadata = {
 export function generateProjectMetadata(projectPath: string): Metadata {
   const project = projects.find((p) => p.path === projectPath)!;
   const title = `${project.name} | Andy Duong`;
-  const imageUrl = project.ogImage;
+  const imageUrl = `${baseMetadata.metadataBase}${project.ogImage}`;
 
   return {
     ...baseMetadata,
