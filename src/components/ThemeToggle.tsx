@@ -58,15 +58,6 @@ export default function ThemeToggle({ enableHover = false }: ThemeToggleProps) {
     setMounted(true);
   }, []);
 
-  // Log theme changes
-  useEffect(() => {
-    console.log({
-      systemPreference: systemTheme,
-      websiteTheme: theme,
-      resolvedTheme: resolvedTheme,
-    });
-  }, [systemTheme, theme, resolvedTheme]);
-
   if (!mounted) {
     return null;
   }

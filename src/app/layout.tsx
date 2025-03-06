@@ -49,16 +49,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={SFPro.variable} suppressHydrationWarning>
-      <head>
-        <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
-        />
-      </head>
       <body
         className="bg-white transition-[background-color] duration-300 dark:bg-dark-bg dark:text-dark-text"
         suppressHydrationWarning
       >
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
+        />
         <ClientLayout>
           <Suspense fallback={null}>
             <div className="layout min-h-screen flex flex-col">
