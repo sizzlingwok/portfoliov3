@@ -3,9 +3,9 @@ import Carousel from "@/components/Carousel";
 
 export default function About() {
   return (
-    <main className="flex-col min-h-screen">
+    <main className="flex-col min-h-screen overflow-x-hidden">
       <AboutContent />
-      <section className="project-section pb-32">
+      <section className="project-section pb-32 w-full">
         <Carousel
           items={[
             {
