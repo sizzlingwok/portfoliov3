@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -7,7 +6,7 @@ import ScrollHeader from "@/components/ScrollHeader";
 import ClientLayout from "@/components/ClientLayout";
 import { Suspense } from "react";
 import { defaultMetadata } from "@/config/metadata";
-
+import Script from "next/script";
 const SFPro = localFont({
   src: [
     {
@@ -64,6 +63,10 @@ export default function RootLayout({
           </Suspense>
         </ClientLayout>
       </body>
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="a77e9a75-2aa4-483a-8700-8f3e4ee363e7"
+      />
     </html>
   );
 }
