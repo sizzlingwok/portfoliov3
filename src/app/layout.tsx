@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import ScrollHeader from "@/components/ScrollHeader";
 import ClientLayout from "@/components/ClientLayout";
 import { Suspense } from "react";
+import { defaultMetadata } from "@/config/metadata";
 
 const SFPro = localFont({
   src: [
@@ -39,14 +40,7 @@ const SFPro = localFont({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Andy Duong",
-    default: "Andy Duong",
-  },
-  description:
-    "Hello I'm Andy Duong — UX Designer based in the Bay Area, creating meaningful narratives driven by my passion for music and art.",
-};
+export const metadata = defaultMetadata;
 
 export default function RootLayout({
   children,

@@ -5,6 +5,7 @@ import ProjectHeader from "@/components/ProjectHeader";
 import CardInfo from "@/components/CardInfo";
 import Carousel from "@/components/Carousel";
 import MarqueeSection from "@/components/MarqueeSection";
+import { generateProjectMetadata } from "@/config/metadata";
 
 const marqueeImages = [
   {
@@ -31,10 +32,7 @@ const marqueeImages = [
 
 const project = projects.find((p) => p.path === "/dillo")!;
 
-export const metadata: Metadata = {
-  title: project.name,
-  description: project.description,
-};
+export const metadata = generateProjectMetadata("/dillo");
 
 export default function Project() {
   return (
