@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description:
       "Interactive reading companion for supporting struggling readers effectively",
     buttonText: "View Presentation",
-    ogImage: "/images/home/readeezy.png",
+    ogImage: "/images/home/readeezy.png"
   },
   {
     id: "002",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     description:
       "Enhancing the group listening experience for an immersive music exploration",
     buttonText: "View Prototype",
-    ogImage: "/images/home/spotify-party.png",
+    ogImage: "/images/home/spotify-party.png"
   },
   {
     id: "003",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description:
       "Cloud sharing platform streamlining music collaboration with others",
     buttonText: "View Prototype",
-    ogImage: "/images/home/sorette.png",
+    ogImage: "/images/home/sorette.png"
   },
   {
     id: "004",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description:
       "Mobile marketplace app dedicated to buying and selling keyboard related products",
     buttonText: "View Prototype",
-    ogImage: "/images/home/mechmarket.png",
+    ogImage: "/images/home/mechmarket.png"
   },
   {
     id: "005",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     description:
       "Integrating ASL for bedtime reading to support deaf and hard of hearing children",
     buttonText: "View Slide Deck",
-    ogImage: "/images/home/dillo.png",
+    ogImage: "/images/home/dillo.png"
   },
 ] as const;
 
