@@ -73,7 +73,7 @@ export default function Project() {
           <VideoSection
             videoId="mechmarket/filters"
             title="Find What You Need, Faster"
-            description="Evaluating the buying and selling experience on the mechmarket subreddit"
+            description="Quickly find products with intuitive filters that refine and personalize your search"
           />
         </div>
       </section>
