@@ -9,7 +9,9 @@ module.exports = {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/_next/", "/api/", "/videos", "/images"],
       },
     ],
+    additionalSitemaps: ["https://andyduong.work/sitemap.xml"],
   },
 };
