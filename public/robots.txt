@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://andyduong.work
+
+# Sitemaps
+Sitemap: https://andyduong.work/sitemap.xml
