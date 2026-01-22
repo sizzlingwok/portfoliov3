@@ -6,14 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
-        lightgray: "#6e6e6e",
+        lightgray: "#aaa",
         sand: "#F4F3F1",
         dark: {
-          lightgray: "#828282",
           bg: "#121212",
           sand: "#1A1917",
         },
@@ -30,3 +29,4 @@ const config: Config = {
 };
 
 export default config;
+
